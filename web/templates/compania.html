@@ -1,0 +1,218 @@
+{% extends 'index-app.html' %}
+{% load static %}
+{% block content %}
+
+<nav id="colorlib-main-nav" role="navigation">
+	<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
+	<div class="js-fullheight colorlib-table">
+		<div class="colorlib-table-cell js-fullheight">
+			<ul>
+				<li><a href="{% url 'web:inicio' %}" style="height: 120px">INICIO</a></li>
+				<li><a href="{% url 'web:obras' %}" style="height: 120px">OBRAS</a></li>
+                <li>
+                    <a href="{% url 'web:escuela' %}" style="height: 120px">ESCUELA</a>
+                </li>
+				<li><a href="{% url 'web:compania' %}"  style="height: 120px">COMPAÑIA</a></li>
+				<li><a href="{% url 'web:contacto' %}" style="height: 120px">CONTACTO</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+<div id="colorlib-page">
+	<header>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="colorlib-navbar-brand">
+                        <a href="{% url 'web:inicio' %}"> <img src="{% static 'images/logo.png' %}" alt="Antagonista" style="height:100px; width:166px;"> </a>
+                    </div>
+                    <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+	
+	<aside id="colorlib-hero">
+        <div class="flexslider">
+            <ul class="slides">
+            	<li style="background-image: url('/static/images/cover_img_5.jpg');">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-12 col-xs-12 col-md-offset-2 text-center slider-text">
+                            <div class="slider-text-inner">
+                                <!-- <h2>Teatro del Antagonista</h2> -->
+                                <!-- <h1>ESTRENOS</h1> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            </ul>
+        </div>
+    </aside>
+   	
+   	<section class="containerobra" style="padding: 19px 13px 12px 34px;">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="big-title">
+                    <p style="margin-bottom: 26px;"><span>COMPAÑÍA</span></p>
+                </h3>
+            </div>
+            <div class="col-md-11">
+                <h5 class="section-title" style="text-transform: uppercase;font-size: 1em;line-height: 1.16667em; margin-bottom: .66667em;">Reseña de la Compañía</h5>
+			    <p style="margin-bottom: 24px;font-family: Courier,monospace; text-align: justify;">
+                La Compañía “Teatro del Antagonista” nace el año 2011 integrada por actores y diseñadores teatrales de la Escuela de Teatro La Casa, Universidad de Chile y dirigida por Manuel Morgado.
+                La propuesta de esta compañía radica en dos ejes principales: El primero se trata de entregar contenidos acordes a la sociedad contemporánea, centrados en la crudeza del devenir de la realidad, con textos reflexivos y de alto contenido emocional, filosófico y político.
+                El otro punto busca otorgar al espectador una propuesta escénica innovadora y vanguardista, entregando montajes contemporáneos, pero resguardando la estética pulcra en la realización.
+                <br>El Teatro del Antagonista, es un quehacer teatral fundado en la figura del Antagonista, como sujeto importante en la estructura dramática. El Antagonista, es quien se opone, es de quien emana la acción para que recaiga en otros. Cuando el antagonista actúa nada volverá a ser como antes.
+                A ese acto subversivo apostamos con nuestro sujeto de acción, con nuestra estructura de pensamiento y mirada estética del teatro.
+                Dentro de los montajes de la compañía se destaca “El Malentendido”, del texto original de Albert Camus en el año 2016.
+                Actualmente la compañía se encuentra en la producción de su nuevo montaje “Yo también quiero ser un hombre blanco heterosexual” texto original de la dramaturga chilena Carla Zúñiga.
+			</p>
+            </div>
+        </div>
+
+
+       <div class="row"  style="margin-bottom: 32px;">
+            <div class="col-md-12">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <video autoplay="true" controls="">
+		                    <source src="{% static 'images/ANTAGON.mp4' %}" type="video/mp4">
+		            </video>
+                </div>
+            </div>
+         </div>
+
+    </section>
+</div>
+
+<style>
+    .item-agenda a span {
+        border-bottom: 1px solid #242d27;
+        font-size: 15px;
+    }
+
+    .item-agenda .title {
+        display: inline !important;
+        font-size: 15px;
+        line-height: 1.25em;
+        text-transform: uppercase;
+    }
+    agenda p {
+        display: inline;
+    }
+
+    .big-title, .cta, .dancer-nav span, .filters a, .filters button, .filters u, .hero text, .section-title, .super-title, .text h4, .text h5, .title {
+        font-weight: 400;
+        font-family: Impact;
+    }
+
+    .item-agenda p {
+        display: inline;
+        font-size: 15px;
+        line-height: 1.42857em;
+    }
+
+    .item-agenda .datetime, .item-agenda p {
+         display: inline;
+    }
+
+    .item-agenda .datetime {
+        display: inline;
+        font-weight: 700;
+        font-size:13px;
+        line-height: 1.25em;
+    }
+
+    .text p {
+        font-size: 14px;
+        line-height: 17px;
+        padding-bottom: 23px;
+    }
+
+
+    @media (min-width: 48em)
+    .containerobra {
+        padding: 0 2.66667em;
+    }
+
+    .containerobra {
+        position: relative;
+        width: 100%;
+        max-width: 1885px;
+        padding: 0 1.33333em;
+        clear: both;
+    }
+    .list li {
+        margin-bottom: 1.33333em;
+        text-transform: uppercase;
+    }
+    .big-title, .cta, .dancer-nav span, .filters a, .filters button, .filters u, .hero text, .section-title, .super-title, .text h4, .text h5, .title {
+        font-weight: 400;
+        font-family: Impact;
+
+    }
+    .big-title span {
+        padding-right: .16667em;
+        font-size: 1.9em;
+        line-height: 1.14286em;
+        font-family: Impact;
+        color :  #242d27
+
+    }
+
+    .big-title sup {
+        font-family: Courier,monospace;
+        <!--font-size: 1.16667em;-->
+        line-height: 1.14286em;
+        vertical-align: top;
+        top: auto;
+    }
+    p, ul {
+        margin: 0;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+    h3{
+        margin: 0;
+        font-weight: 100;
+        font-size: 1em;
+    }
+    .list a {
+        opacity: 1;
+        transition: opacity .2s linear;
+    }
+    a, a:active, a:hover, a:visited {
+        color: inherit;
+    }
+    a {
+        text-decoration: none;
+    }
+    a:hover, a.span:hover   {color: gray;    text-decoration: none;
+    }
+
+    .container {
+        padding: 0 2.66667em;
+    }
+
+    .container {
+        position: relative;
+        width: 100%;
+        <!--max-width: 1280px;-->
+        padding: 0 1.33333em;
+        clear: both;
+        margin-right: 0;
+        margin-left: 0;
+    }
+    
+</style>
+
+{% endblock %}
+
+{% block script %}
+{% endblock %}
+

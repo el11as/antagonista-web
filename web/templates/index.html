@@ -1,0 +1,67 @@
+{% extends 'index-antagonista.html' %}
+{% load static %}
+{% block content %}
+<section>
+    <video autoplay muted loop id="myVideo">
+      <source src="{% static 'images/final.mp4' %}" type="video/mp4">
+    </video>
+
+    <div class="content">
+      <a href="{% url 'web:inicio' %}" >
+        <img src="{% static 'images/logo.png' %}" alt="Antagonista">
+      </a>
+    </div>
+</section>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+}
+
+.content {
+    position: fixed;
+    bottom: 0;
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+    left: 0px;
+}
+
+img, video, iframe, embed, object {
+    max-width: 23% !important;
+    display: block;
+    margin: auto;
+    padding: 0px !important;
+}
+
+
+</style>
+
+
+{% endblock %}
+
+{% block script %}
+<script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
+{% endblock %}

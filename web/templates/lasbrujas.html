@@ -1,0 +1,308 @@
+{% extends 'index-app.html' %}
+{% load static %}
+{% block content %}
+
+
+<nav id="colorlib-main-nav" role="navigation">
+    <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
+    <div class="js-fullheight colorlib-table">
+        <div class="colorlib-table-cell js-fullheight">
+            <ul>
+                <li><a href="{% url 'web:inicio' %}" style="height: 120px">INICIO</a></li>
+                <li><a href="{% url 'web:obras' %}" style="height: 120px">OBRAS</a></li>
+                <li>
+                    <a href="{% url 'web:escuela' %}" style="height: 120px">ESCUELA</a>
+                </li>
+                <li><a href="{% url 'web:compania' %}"  style="height: 120px">COMPAÑIA</a></li>
+                <li><a href="{% url 'web:contacto' %}" style="height: 120px">CONTACTO</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div id="colorlib-page">
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="colorlib-navbar-brand">
+                        <a href="{% url 'web:inicio' %}"> <img src="{% static 'images/logo.png' %}" alt="Antagonista" style="height:100px; width:166px;"> </a>
+                    </div>
+                    <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <aside id="colorlib-hero">
+        <div class="flexslider">
+            <ul class="slides">
+                <li style="background-image: url('/static/images/cover_img_5.jpg');">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-12 col-xs-12 col-md-offset-2 text-center slider-text">
+                            <div class="slider-text-inner">
+                                <!-- <h2>Teatro del Antagonista</h2> -->
+                                <!-- <h1>ESTRENOS</h1> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            </ul>
+        </div>
+    </aside>
+
+    <section class="containerobra" style="padding: 19px 13px 12px 34px;">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="big-title">
+                    <p style="margin-bottom: 26px;"><span>La Gaviota / Antón Chejov</span> <sup>2017</sup></p>
+                </h3>
+            </div>
+            <div class="col-md-7">
+                <h5 class="section-title" style="text-transform: uppercase;font-size: 1em;line-height: 1.16667em; margin-bottom: .66667em;">Reseña de la Obra</h5>
+                <p style="margin-bottom: 24px;font-family: Courier,monospace; text-align: justify;">
+                    “Mucha conversación sobre literatura, un poco de acción, toneladas de amor”. La frase es de una carta de 1895 en la que Antón Chéjov describía la obra que estaba creando. El texto era <b>La gaviota</b>, que hoy es considerada el primer pilar de su fama como uno de los dramaturgos más grandes de la historia. Una carrera que estuvo a punto de abandonar si hubiera permanecido en el desaliento que le produjo que el estreno fuera un fracaso total. Porque en un otoñal San Petersburgo de 1896, el debut de La gaviota fue abucheado hasta que la protagonista perdió la voz y Chéjov se escondió tras bambalinas. Pero dos años después, Konstantín Stanislavski volvió a montar la obra y cambió la historia. El director había entendido que si en la obra pasa poco en términos convencionales es porque la acción está remeciendo el alma de los personajes.
+                    La gaviota es una exploración por la tragedia de la banalidad de la vida retratada en un grupo de artistas vinculados por parentesco y pasiones, en conflicto por egos y frustraciones, sometidos a su tedio y vacío.
+            </p>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 32px">
+            <div class="col-sm-4">
+                <h5 class="section-title" style="text-transform: uppercase;font-size: 1em;line-height: 1.16667em; margin-bottom: .66667em;">Ficha Artística</h5>
+                <div class="text credit-2" style="padding-right: 16px; text-align: justify;">
+                    <p><strong>Dirección</strong><br>
+                    Manuel Morgado</p>
+
+                    <p><strong>Dramaturgia </strong><br>
+                    Antón Chejov</p>
+
+                    <p><strong>Diseño Integral</strong><br>
+                    Manuel Morgado</p>
+
+                    <p><strong>Elenco</strong><br>
+                    Catalina López, Juan Umaña, Rodrigo Mardones, Kristopher Gómez, Cynthia Rodríguez, Diego Molina, David Naranjo</p>
+
+
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="text credit-2" style="">
+
+                    <p><strong>Realización de Vestuario</strong><br>
+                    Manuel Morgado</p>
+
+                    <p><strong>Diseño Sonoro</strong><br>
+                    Manuel Morgado</p>
+
+                    <p><strong>Realización Escenográfica</strong><br>
+                    Manuel Morgado, Juan Umaña, Catalona López, Kristopher Gómez</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 32px;">
+            <div class="col-md-12">
+                <h5 class="section-title" style="text-transform: uppercase;font-size: 1em;line-height: 1.16667em; margin-bottom: .66667em;">Próximas Fechas</h5>
+                <ul>
+                    <li class="item-agenda">
+                        <div class="datetime"><time datetime="2018-11-03">Sin Fechas</time></div>
+                        <h3 class="title">La Gaviota</h3>
+                        <p><a href="" target="_blank"><span></span></a></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row"  style="margin-bottom: 32px;">
+            <div class="col-md-6">
+                <h5 class="section-title" style="text-transform: uppercase;font-size: 1em;line-height: 1.16667em; margin-bottom: .66667em;">Trailer</h5>
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/wJzoos4rE_o" allowfullscreen></iframe>
+                </div>
+            </div>
+         </div>
+        <div class="row mb-2">
+            <div class="col-md-8 animate-box intro-heading">
+               <h5 class="section-title" style="text-transform: uppercase;font-size: 1em;line-height: 1.16667em; margin-bottom: .66667em;">Galería</h5>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 animate-box text-center">
+                <a href="" class="work-img" style="background-image: url('/static/images/gaviota-1.jpg');">
+                    <div class="overlay"></div>
+                    <div class="desc">
+                        <span class="icon"><i class="icon-heart-outline"></i></span>
+                        <p class="tag"><span>Illustration</span>, <span>Logo</span></p>
+                        <h3>Work 01</h3>
+                        <span class="read-more">Read more <i class="icon-arrow-right3"></i></span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 animate-box text-center">
+                <a href="" class="work-img" style="background-image: url('/static/images/gaviota-2.jpg');">
+                    <div class="overlay"></div>
+                    <div class="desc">
+                        <span class="icon"><i class="icon-heart-outline"></i></span>
+                        <p class="tag"><span>Web Design</span>, <span>UI</span></p>
+                        <h3>Work 02</h3>
+                        <span class="read-more">Read more <i class="icon-arrow-right3"></i></span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 animate-box text-center">
+                <a href="" class="work-img" style="background-image: url('/static/images/gaviota-3.jpg');">
+                    <div class="overlay"></div>
+                    <div class="desc">
+                        <span class="icon"><i class="icon-heart-outline"></i></span>
+                        <p class="tag"><span>Logo</span>, <span>Illustration</span></p>
+                        <h3>Work 03</h3>
+                        <span class="read-more">Read more <i class="icon-arrow-right3"></i></span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 animate-box text-center">
+                <a href="" class="work-img" style="background-image: url('/static/images/gaviota-4.jpg');">
+                    <div class="overlay"></div>
+                    <div class="desc">
+                        <span class="icon"><i class="icon-heart-outline"></i></span>
+                        <p class="tag"><span>Apps</span>, <span>Brand Identity</span></p>
+                        <h3>Work 04</h3>
+                        <span class="read-more">Read more <i class="icon-arrow-right3"></i></span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+</div>
+
+<style>
+    .item-agenda a span {
+        border-bottom: 1px solid #242d27;
+        font-size: 15px;
+    }
+
+    .item-agenda .title {
+        display: inline !important;
+        font-size: 15px;
+        line-height: 1.25em;
+        text-transform: uppercase;
+    }
+    agenda p {
+        display: inline;
+    }
+
+    .big-title, .cta, .dancer-nav span, .filters a, .filters button, .filters u, .hero text, .section-title, .super-title, .text h4, .text h5, .title {
+        font-weight: 400;
+        font-family: Impact;
+    }
+
+    .item-agenda p {
+        display: inline;
+        font-size: 15px;
+        line-height: 1.42857em;
+    }
+
+    .item-agenda .datetime, .item-agenda p {
+         display: inline;
+    }
+
+    .item-agenda .datetime {
+        display: inline;
+        font-weight: 700;
+        font-size:13px;
+        line-height: 1.25em;
+    }
+
+    .text p {
+        font-size: 14px;
+        line-height: 17px;
+        padding-bottom: 23px;
+    }
+
+
+    @media (min-width: 48em)
+    .containerobra {
+        padding: 0 2.66667em;
+    }
+
+    .containerobra {
+        position: relative;
+        width: 100%;
+        max-width: 1885px;
+        padding: 0 1.33333em;
+        clear: both;
+    }
+    .list li {
+        margin-bottom: 1.33333em;
+        text-transform: uppercase;
+    }
+    .big-title, .cta, .dancer-nav span, .filters a, .filters button, .filters u, .hero text, .section-title, .super-title, .text h4, .text h5, .title {
+        font-weight: 400;
+        font-family: Impact;
+
+    }
+    .big-title span {
+        padding-right: .16667em;
+        font-size: 1.9em;
+        line-height: 1.14286em;
+        font-family: Impact;
+        color :  #242d27
+
+    }
+
+    .big-title sup {
+        font-family: Courier,monospace;
+        <!--font-size: 1.16667em;-->
+        line-height: 1.14286em;
+        vertical-align: top;
+        top: auto;
+    }
+    p, ul {
+        margin: 0;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+    h3{
+        margin: 0;
+        font-weight: 100;
+        font-size: 1em;
+    }
+    .list a {
+        opacity: 1;
+        transition: opacity .2s linear;
+    }
+    a, a:active, a:hover, a:visited {
+        color: inherit;
+    }
+    a {
+        text-decoration: none;
+    }
+    a:hover, a.span:hover   {color: gray;    text-decoration: none;
+    }
+
+    .container {
+        padding: 0 2.66667em;
+    }
+
+    .container {
+        position: relative;
+        width: 100%;
+        <!--max-width: 1280px;-->
+        padding: 0 1.33333em;
+        clear: both;
+        margin-right: 0;
+        margin-left: 0;
+    }
+    
+</style>
+
+{% endblock %}
+
+{% block script %}
+{% endblock %}
+

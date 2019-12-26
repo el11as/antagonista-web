@@ -1,0 +1,337 @@
+{% extends 'index-app.html' %}
+{% load static %}
+{% block content %}
+
+<nav id="colorlib-main-nav" role="navigation">
+	<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
+	<div class="js-fullheight colorlib-table">
+		<div class="colorlib-table-cell js-fullheight">
+			<ul>
+				<li><a href="{% url 'web:inicio' %}" style="height: 120px">INICIO</a></li>
+				<li><a href="{% url 'web:obras' %}" style="height: 120px">OBRAS</a></li>
+                <li>
+                    <a href="{% url 'web:escuela' %}" style="height: 120px">ESCUELA</a>
+                </li>
+				<li><a href="{% url 'web:compania' %}"  style="height: 120px">COMPAÑIA</a></li>
+				<li><a href="{% url 'web:contacto' %}" style="height: 120px">CONTACTO</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<div id="colorlib-page">
+	<header>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="colorlib-navbar-brand">
+						<a href="{% url 'web:inicio' %}"> <img src="{% static 'images/logo.png' %}" alt="Antagonista" style="height:100px; width:166px;"> </a>
+					</div>
+					<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<aside id="colorlib-hero">
+		<div class="flexslider">
+			<ul class="slides">
+		   		<li class="" style="background-image: url('/static/images/cover_img_7.jpg');"></li>
+            	<li class="" style="background-image: url('/static/images/maleta_amarilla.PNG');"></li>
+				<li class="" style="background-image: url('/static/images/cover_img_4.jpg'); "></li>
+		  	</ul>
+	  	</div>
+	</aside>
+	<!-- <aside id="colorlib-hero">
+		<div class="flexslider">
+			<ul class="slides">
+		   		<li><img src="/static/images/cover_img_7.jpg"></li>
+            	<li><img src="/static/images/maleta_amarilla.PNG"></li>
+				<li><img src="/static/images/cover_img_4.jpg"></li>
+		  	</ul>
+	  	</div>
+	</aside> -->
+
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="col-md-4">
+					<section id="home_productions">
+						<h3 class="section-title">Próximas Funciones</h3>
+						<ul>
+							<li class="item item-prod">
+								<a href="{% url 'web:yotambien' %}" target="_self">
+									<div class="datetime">
+										<time datetime="2019-05-30">30.05.2019</time>
+									</div>
+									<h4 class="title">Yo también quiero ser un hombre blanco heterosexual</h4>
+									<p>Teatro Camilo Henríquez, Santiago</p>
+								</a>
+							</li>
+
+							<li class="item item-prod">
+								<a href="{% url 'web:yotambien' %}" target="_self">
+									<div class="datetime">
+										<time datetime="2019-05-31">31.05.2019</time>
+									</div>
+									<h4 class="title">Yo también quiero ser un hombre blanco heterosexual</h4>
+									<p>Teatro Camilo Henríquez, Santiago</p>
+								</a>
+							</li>
+
+							<li class="item item-prod">
+								<a href="{% url 'web:yotambien' %}" target="_self">
+									<div class="datetime">
+										<time datetime="2019-06-01">01.06.2019</time>
+									</div>
+									<h4 class="title">Yo también quiero ser un hombre blanco heterosexual</h4>
+									<p>Teatro Camilo Henríquez, Santiago</p>
+								</a>
+							</li>
+
+						   <li class="item item-prod">
+								<a href="{% url 'web:yotambien' %}" target="_self">
+									<div class="datetime">
+										<time datetime="2019-06-02">02.06.2019</time>
+									</div>
+									<h4 class="title">Yo también quiero ser un hombre blanco heterosexual</h4>
+									<p>Teatro Camilo Henríquez, Santiago</p>
+								</a>
+							</li>
+						</ul>
+		                <!-- <a href="https://www.rosas.be/en/agenda/" class="cta">Agenda</a> -->
+					</section>
+				</div>
+				<div class="col-md-4">
+		            <section id="home_news">
+						<h3 class="section-title">Noticias</h3>
+						<ul>
+							<li class="item item-prod">
+								<a href="{% url 'web:inicio' %}" target="_self" class="inner">
+		                            <h5 class="title">
+		                                <span>Re-Estreno: <i>Yo también quiero ser un hombre blanco heterosexual en Teatro Camilo Henríquez.</i></span>
+		                            </h5>
+		                            <address>Published on <time datetime="2019-01-13 CEST12:23">13.01.2019</time></address>
+		                        </a>
+							</li>
+
+							<li class="item item-prod">
+								<a href="{% url 'web:inicio' %}" target="_self" class="inner">
+		                            <h5 class="title">
+		                                <span>Estreno: <i>Bellcross, una investigación del Velcro y la música electrónica. Julio, Centro Cultural Matucana 100.</i></span>
+		                            </h5>
+		                            <address>Published on <time datetime="2019-01-13 CEST12:23">13.01.2019</time></address>
+		                        </a>
+							</li>
+
+							<li class="item item-prod">
+								<a href="{% url 'web:inicio' %}" target="_self" class="inner">
+		                            <h5 class="title">
+		                                <span>Estreno: <i>Constelaciones Familiares, nuestro próximo montaje. Segundo Semestre 2019</i></span>
+		                            </h5>
+		                            <address>Published on <time datetime="2019-01-13 CEST12:23">13.01.2019</time></address>
+		                        </a>
+							</li>
+
+						   <li class="item item-prod">
+								<a href="{% url 'web:inicio' %}" target="_self" class="inner">
+		                            <h5 class="title">
+		                                <span>Estreno: <i>Exitosa temporada de Yo también quiero ser un hombre blanco heterosexual en Centro Cultural Matucana 100</i></span>
+		                            </h5>
+		                            <address>Published on <time datetime="2019-01-13 CEST12:23">13.01.2019</time></address>
+		                        </a>
+							</li>
+						</ul>
+		                <!-- <a href="https://www.rosas.be/en/agenda/" class="cta">Agenda</a> -->
+					</section>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<style>
+
+	#colorlib-hero .flexslider .slides li {
+        min-height: 400px;
+	  	background-size: cover;
+	 	background-position: center;
+	 	    padding-bottom: 4%;
+    }
+
+
+    #home_news, #home_productions {
+        padding-top: 1.33333em;
+        margin-bottom: 4em;
+    }
+
+    .section-title {
+        font-size: 2em;
+        line-height: 1.16667em;
+        margin-bottom: .66667em;
+        text-transform: uppercase;
+        font-family: HelveticaProBlack,Helvetica,Impact,Arial,sans-serif;
+    }
+
+    .item, .item a {
+        position: relative;
+    }
+
+    .item {
+        display: inline-block;
+        vertical-align: top;
+        width: 100%;
+        overflow-x: hidden;
+        margin-bottom: 2.66667em;
+    }
+
+    .item a {
+        display: block;
+        opacity: 1;
+        -webkit-transition: opacity .2s linear .1s;
+        transition: opacity .2s linear .1s;
+    }
+
+    .item, .item a {
+        position: relative;
+    }
+
+    a, a:active, a:hover, a:visited {
+        color: inherit;
+    }
+    a {
+        text-decoration: none;
+    }
+
+    a:focus, a:hover, button:focus, input:focus, select:focus, textarea:focus {
+        outline: none;
+        text-decoration: inherit !important;
+
+    }
+
+    .item-prod a:after {
+        content: "";
+        display: block;
+        background: #242d27;
+        height: 2px;
+        width: 10em;
+        margin-top: 1em;
+    }
+
+    *, :after, :before, html, input[type=search] {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    .item a:focus, a:hover, .mdzr-no-touchevents .item a:hover {
+        opacity: .5;
+        text-decoration: inherit !important;
+    }
+
+    .item-prod .title {
+        text-transform: uppercase;
+    }
+
+    .title {
+        font-size: 2em;
+        line-height: 1em;
+    }
+
+    .big-title, .cta, .dancer-nav span, .filters a, .filters button, .filters u, .hero text, .section-title, .super-title, .text h4, .text h5, .title {
+        font-weight: 700;
+        font-family: HelveticaProBlack,Helvetica,Impact,Arial,sans-serif !important;
+        font-kerning: auto;
+        font-variant-ligatures: discretionary-ligatures,contextual;
+        font-variant-numeric: diagonal-fractions;
+        font-feature-settings: "case","dlig","frac","kern","liga","ordn","ornm";
+    }
+
+    .item-prod .datetime, .item-prod p {
+        display: block;
+        font-weight: 700;
+        font-size: 0.9em;
+        line-height: 1.11111em;
+    }
+
+    p, ul {
+        margin: 0;
+        padding-left: 0px;
+    }
+
+    body {
+        font-family: Courier,monospace !important;
+        font-weight: 400 !important;
+        font-style: normal !important;
+        line-height: inherit !important;
+    }
+
+	h1, h2, h3, h4, h5, h6 {
+    	color: rgba(0, 0, 0, 0.8);
+    	font-family: "Inconsolata", monospace;
+    	font-weight: 400;
+    	margin: 0 0 0 0;
+	}
+	p{
+
+ 	   font-family: Courier,monospace !important;
+
+	}
+	.title {
+    	font-size: 1em;
+    	line-height: 1em;
+	}
+
+	.section-title {
+		font-size: 2em;
+		line-height: 1.16667em;
+		margin-bottom: .66667em;
+		text-transform: uppercase;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+    	margin: 0;
+    	font-weight: 400;
+    	font-size: 1em;
+	}
+	
+
+	.container {
+		position: relative;
+		width: 100%;
+		/*padding: 0 1.33333em;*/
+		clear: both;
+		margin-right: 0;
+    	margin-left: 0;
+	}
+
+	.home-container {
+    	position: relative;
+	}
+
+
+	.section-title {
+		font-size: 20px;
+		/*margin-left: 40px;*/
+	}
+
+	.cta {
+    text-transform: uppercase;
+    display: inline-block;
+    font-size: 2em;
+    line-height: 1.16667em;
+    padding-bottom: 2px;
+    border-bottom: 2px solid #242d27;
+}
+</style>
+
+<style>
+  @font-face {
+    font-family: 'abc';
+    src: url('{% static 'fonts/bootstrap/Helvetica-Black.otf' %}');
+	src: local('{% static 'fonts/bootstrap/Helvetica-Black.otf' %}');
+  }
+</style>
+{% endblock %}
+
+{% block script %}
+{% endblock %}

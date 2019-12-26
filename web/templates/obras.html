@@ -1,0 +1,433 @@
+{% extends 'index-app.html' %}
+{% load static %}
+{% block content %}
+
+<nav id="colorlib-main-nav" role="navigation">
+    <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
+    <div class="js-fullheight colorlib-table">
+        <div class="colorlib-table-cell js-fullheight">
+            <ul>
+                <li><a href="{% url 'web:inicio' %}" style="height: 120px">INICIO</a></li>
+                <li><a href="{% url 'web:obras' %}" style="height: 120px">OBRAS</a></li>
+                <li>
+                    <a href="{% url 'web:escuela' %}" style="height: 120px">ESCUELA</a>
+                </li>
+                <li><a href="{% url 'web:compania' %}"   style="height: 120px">COMPAÑIA</a></li>
+                <li><a href="{% url 'web:contacto' %}" style="height: 120px">CONTACTO</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div id="colorlib-page">
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="colorlib-navbar-brand">
+                        <a href="{% url 'web:inicio' %}"> <img src="{% static 'images/logo.png' %}" alt="Antagonista" style="height:100px; width:166px;"> </a>
+                    </div>
+                    <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <aside id="colorlib-hero">
+        <div class="flexslider">
+            <ul class="slides">
+              <li style="background-image: url('/static/images/head_00_obra.jpg');">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-12 col-xs-12 col-md-offset-2 text-center slider-text">
+                            <div class="slider-text-inner">
+                                <!-- <h2>Teatro del Antagonista</h2> -->
+                                <!-- <h1>ESTRENOS</h1> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li style="background-image: url('/static/images/head_01_obra.jpg');">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-12 col-xs-12 col-md-offset-2 text-center slider-text">
+                            <div class="slider-text-inner">
+                                <!-- <h2>Teatro del Antagonista</h2> -->
+                                <!-- <h1>ESTRENOS</h1> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li style="background-image: url('/static/images/head_02_obra.jpg');">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-12 col-xs-12 col-md-offset-2 text-center slider-text">
+                            <div class="slider-text-inner">
+                                <!-- <h2>Teatro del Antagonista</h2> -->
+                                <!-- <h1>ESTRENOS</h1> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li style="background-image: url('/static/images/head_03_obra.jpg');">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-12 col-xs-12 col-md-offset-2 text-center slider-text">
+                            <div class="slider-text-inner">
+                                <!-- <h2>Teatro del Antagonista</h2> -->
+                                <!-- <h1>ESTRENOS</h1> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li style="background-image: url('/static/images/head_04_obra.jpg');">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-12 col-xs-12 col-md-offset-2 text-center slider-text">
+                            <div class="slider-text-inner">
+                                <!-- <h2>Teatro del Antagonista</h2> -->
+                                <!-- <h1>ESTRENOS</h1> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li style="background-image: url('/static/images/head_05_obra.jpg');">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-12 col-xs-12 col-md-offset-2 text-center slider-text">
+                            <div class="slider-text-inner">
+                                <!-- <h2>Teatro del Antagonista</h2> -->
+                                <!-- <h1>ESTRENOS</h1> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li style="background-image: url('/static/images/head_06_obra.jpg');">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-12 col-xs-12 col-md-offset-2 text-center slider-text">
+                            <div class="slider-text-inner">
+                                <!-- <h2>Teatro del Antagonista</h2> -->
+                                <!-- <h1>ESTRENOS</h1> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+             <li style="background-image: url('/static/images/head_07_obra.jpg');">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-12 col-xs-12 col-md-offset-2 text-center slider-text">
+                            <div class="slider-text-inner">
+                                <!-- <h2>Teatro del Antagonista</h2> -->
+                                <!-- <h1>ESTRENOS</h1> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            </ul>
+
+        </div>
+    </aside>
+
+    <section class="containerobra" style="padding: 19px 13px 12px 34px;">
+        <ul class="list" style="margin-bottom: 100px;">
+
+            <li>
+                <h3 class="big-title">
+                    <a href="{% url 'web:obras' %}"><span>Constelaciones Familiares/ Carla Zuñiga</span> <sup><b>Estreno</b></sup>
+                   </a>
+               </h3>
+            </li>
+
+            <li>
+                <h3 class="big-title">
+                    <a href="{% url 'web:bellcross' %}"><span>Bell Cross/ Manuel Morgado & Gema Contreras</span> <sup><b>Estreno</b></sup>
+                   </a>
+               </h3>
+            </li>
+
+            <li>
+                <h3 class="big-title">
+                    <a href="{% url 'web:yotambien' %}"><span>Yo también quiero ser un hombre blanco Heterosexual / Carla Zuñiga</span> <sup>2018</sup>
+                   </a>
+               </h3>
+            </li>
+            <li>
+                <h3 class="big-title">
+                    <a href="{% url 'web:malentendido' %}"><span>El Malentendido / Albert Camus</span> <sup>2016</sup>
+                   </a>
+               </h3>
+            </li>
+            <li>
+                <h3 class="big-title">
+                    <a href="{% url 'web:silencio' %}"><span>Silencio / Aldo Droguett</span> <sup>2012</sup>
+                   </a>
+               </h3>
+            </li>
+
+            <li>
+                <h3 class="big-title">
+                    <a href="{% url 'web:coloquios' %}"><span>Coloquios / Fernando Cuadra</span> <sup>2011</sup>
+                   </a>
+               </h3>
+            </li>
+            <li>
+                <h3 class="big-title">
+                    <a href="{% url 'web:direcciones' %}"><span>Otras Direcciones</span> <sup>2017</sup>
+                   </a>
+               </h3>
+            </li>
+        </ul>
+    </section>
+</div>
+
+
+<style>
+
+    #colorlib-hero .flexslider .flex-control-nav li a {
+        background: none !important;
+    }
+
+    .section-title {
+        font-size: 2em;
+        line-height: 1.16667em;
+        margin-bottom: .66667em;
+        text-transform: uppercase;
+        font-family: HelveticaProBlack,Helvetica,Impact,Arial,sans-serif;
+    }
+
+    .item, .item a {
+        position: relative;
+    }
+
+    .item {
+        display: inline-block;
+        vertical-align: top;
+        width: 100%;
+        overflow-x: hidden;
+        margin-bottom: 2.66667em;
+    }
+
+    .item a {
+        display: block;
+        opacity: 1;
+        -webkit-transition: opacity .2s linear .1s;
+        transition: opacity .2s linear .1s;
+    }
+
+    .item, .item a {
+        position: relative;
+    }
+
+    a, a:active, a:hover, a:visited {
+        color: inherit;
+    }
+    a {
+        text-decoration: none;
+    }
+
+    a:focus, a:hover, button:focus, input:focus, select:focus, textarea:focus {
+        outline: none;
+        text-decoration: inherit !important;
+
+    }
+
+    .item-prod a:after {
+        content: "";
+        display: block;
+        background: #242d27;
+        height: 2px;
+        width: 10em;
+        margin-top: 1em;
+    }
+
+    *, :after, :before, html, input[type=search] {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    .item a:focus, a:hover, .mdzr-no-touchevents .item a:hover {
+        opacity: .5;
+        text-decoration: inherit !important;
+    }
+
+    .item-prod .title {
+        text-transform: uppercase;
+    }
+
+    .title {
+        font-size: 2em;
+        line-height: 1em;
+    }
+
+    .big-title, .cta, .dancer-nav span, .filters a, .filters button, .filters u, .hero text, .section-title, .super-title, .text h4, .text h5, .title {
+        font-weight: 700;
+        font-family: HelveticaProBlack,Helvetica,Impact,Arial,sans-serif !important;
+        font-kerning: auto;
+        font-variant-ligatures: discretionary-ligatures,contextual;
+        font-variant-numeric: diagonal-fractions;
+        font-feature-settings: "case","dlig","frac","kern","liga","ordn","ornm";
+    }
+
+    .item-prod .datetime, .item-prod p {
+        display: block;
+        font-weight: 700;
+        font-size: 0.9em;
+        line-height: 1.11111em;
+        padding-bottom: .44444em;
+    }
+
+    p, ul {
+        margin: 0;
+    }
+
+    body {
+        font-family: Courier,monospace !important;
+        font-weight: 400 !important;
+        font-style: normal !important;
+        line-height: inherit !important;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        color: rgba(0, 0, 0, 0.8);
+        font-family: "Inconsolata", monospace;
+        font-weight: 400;
+        margin: 0 0 0 0;
+    }
+    p{
+
+       font-family: Courier,monospace !important;
+
+    }
+    .title {
+        font-size: 1em;
+        line-height: 1em;
+    }
+
+    .section-title {
+        font-size: 2em;
+        line-height: 1.16667em;
+        margin-bottom: .66667em;
+        text-transform: uppercase;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        margin: 0;
+        font-weight: 400;
+        font-size: 1em;
+    }
+    .container {
+        padding: 0 2.66667em;
+    }
+
+    .container {
+        position: relative;
+        width: 100%;
+        <!--max-width: 1280px;-->
+        padding: 0 1.33333em;
+        clear: both;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .home-container {
+        position: relative;
+    }
+
+
+    .section-title {
+        font-size: 20px;
+        margin-left: 40px;
+    }
+
+    .cta {
+    text-transform: uppercase;
+        display: inline-block;
+        font-size: 2em;
+        line-height: 1.16667em;
+        padding-bottom: 2px;
+        border-bottom: 2px solid #242d27;
+    }
+
+        @media (min-width: 48em)
+    .containerobra {
+        padding: 0 2.66667em;
+    }
+
+    .containerobra {
+        position: relative;
+        width: 100%;
+        max-width: 1885px;
+        padding: 0 1.33333em;
+        clear: both;
+    }
+    .list li {
+        margin-bottom: 1.33333em;
+        text-transform: uppercase;
+    }
+    .big-title, .cta, .dancer-nav span, .filters a, .filters button, .filters u, .hero text, .section-title, .super-title, .text h4, .text h5, .title {
+        font-weight: 400;
+        font-family: Impact;
+
+    }
+    .big-title span {
+        padding-right: .16667em;
+        font-size: 1.9em;
+        line-height: 1.14286em;
+        font-family: Impact;
+        color :  #000000
+
+    }
+
+    .big-title sup {
+        font-family: Courier,monospace;
+        <!--font-size: 1.16667em;-->
+        line-height: 1.14286em;
+        vertical-align: top;
+        top: auto;
+    }
+    p, ul {
+        margin: 0;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+    h3{
+        margin: 0;
+        font-weight: 100;
+        font-size: 1em;
+    }
+    .list a {
+        opacity: 1;
+        transition: opacity .2s linear;
+    }
+    a, a:active, a:hover, a:visited {
+        color: inherit;
+    }
+    a {
+        text-decoration: none;
+    }
+    a:hover, a.span:hover   {color: gray;    text-decoration: none;}
+</style>
+
+{% endblock %}
+
+{% block script %}
+{% endblock %}

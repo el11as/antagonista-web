@@ -1,0 +1,356 @@
+{% extends 'index-app.html' %}
+{% load static %}
+{% block content %}
+
+
+<nav id="colorlib-main-nav" role="navigation">
+    <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
+    <div class="js-fullheight colorlib-table">
+        <div class="colorlib-table-cell js-fullheight">
+            <ul>
+                <li><a href="{% url 'web:inicio' %}" style="height: 120px">INICIO</a></li>
+                <li><a href="{% url 'web:obras' %}" style="height: 120px">OBRAS</a></li>
+                <li>
+                    <a href="{% url 'web:escuela' %}" style="height: 120px">ESCUELA</a>
+                </li>
+                <li><a href="{% url 'web:compania' %}"  style="height: 120px">COMPAÑIA</a></li>
+                <li><a href="{% url 'web:contacto' %}" style="height: 120px">CONTACTO</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div id="colorlib-page">
+	<header>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="colorlib-navbar-brand">
+                        <a href="{% url 'web:inicio' %}"> <img src="{% static 'images/logo.png' %}" alt="Antagonista" style="height:100px; width:166px;"> </a>
+                    </div>
+                    <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+	
+    <aside id="colorlib-hero">
+        <div class="flexslider">
+            <ul class="slides">
+                <li style="background-image: url('/static/images/malen_02.jpg');">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-12 col-xs-12 col-md-offset-2 text-center slider-text">
+                            <div class="slider-text-inner">
+                                <!-- <h2>Teatro del Antagonista</h2> -->
+                                <!-- <h1>ESTRENOS</h1> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </li>
+             <li style="background-image: url('/static/images/malen_01.jpg');">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-12 col-xs-12 col-md-offset-2 text-center slider-text">
+                            <div class="slider-text-inner">
+                                <!-- <h2>Teatro del Antagonista</h2> -->
+                                <!-- <h1>ESTRENOS</h1> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </li>
+                <li style="background-image: url('/static/images/malen_00.jpg');">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-12 col-xs-12 col-md-offset-2 text-center slider-text">
+                            <div class="slider-text-inner">
+                                <!-- <h2>Teatro del Antagonista</h2> -->
+                                <!-- <h1>ESTRENOS</h1> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </li>
+            </ul>
+        </div>
+    </aside>
+
+   	<section class="containerobra" style="padding: 19px 13px 12px 34px;">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="big-title">
+                    <p style="margin-bottom: 26px;"><span>El Malentendido / Albert Camus</span> <sup>2016</sup></p>
+                </h3>
+            </div>
+            <div class="col-md-7">
+                <h5 class="section-title" style="text-transform: uppercase;font-size: 1em;line-height: 1.16667em; margin-bottom: .66667em;">Reseña de la Obra</h5>
+			    <p style="margin-bottom: 24px;font-family: Courier,monospace; text-align: justify;"> “El Malentendido”, es la historia de un magnetismo solar de atracción irreprimible sobre Marta. Esta y su madre,
+                    cuando alguien viene a hospedarse al aislado albergue donde habitan, matan, roban dinero y luego
+                    arrojan su cuerpo al río cercano.
+                    Concentradas en esta atroz tarea, se han endurecido, equivalentes a parcas, su existencia parece no ser sino el asecho de la víctima
+                    posible. Y una última víctima viene inocentemente a cerrar su ciclo de exterminio; Jan, el hijo prodigo, no revela su identidad porque,
+                    necesitando sentirse extranjero entre los suyos, quiere que se le extrañe profundamente, es decir que no se le reconozca por mero impulso del corazón.
+                    Ni su madre ni su hermana lo reconocen y el malentendido se produce: le asesinan como a cualquier otro, para luego descubrir que él era aquel al que han quitado la vida.
+			</p>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 32px">
+            <div class="col-sm-4">
+                <h5 class="section-title" style="text-transform: uppercase;font-size: 1em;line-height: 1.16667em; margin-bottom: .66667em;">Ficha Artística</h5>
+                <div class="text credit-2" style="padding-right: 16px; text-align: justify;">
+                    <p><strong>Dirección</strong><br>
+                    Manuel Morgado</p>
+
+                    <p><strong>Dramaturgia </strong><br>
+                    Albert Camus</p>
+
+                    <p><strong>Producción General</strong><br>
+                    Lorena Ojeda</p>
+
+                    <p><strong>Elenco</strong><br>
+                    Patricia Velasco, Paulina Eguiluz, Moisés Angulo, Renata Casale, Manuel González</p>
+
+                    <p><strong>Escenografía</strong><br>
+                    Manuel Morgado, Luis Alcaide</p>
+
+                    <p><strong>Diseño de Vestuario</strong><br>
+                    Katiuska Valenzuela</p>
+
+                    <p><strong>Iluminación</strong><br>
+                    Daniela Valenzuela, Belén Abarza</p>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="text credit-2" style="">
+                <p><strong>Asistencia Dirección</strong><br>
+                Luis Concha</p>
+
+                <p><strong>Diseño Sonoro</strong><br>
+                Gonzalo Hurtado</p>
+
+                <p><strong>Setting sonido</strong><br>
+                Renzo Filinich</p>
+
+                <p><strong>Realización Escenográfica</strong><br>
+                German Martínez, Aníbal Ellado</p>
+
+                <p><strong>Peluquería</strong><br>
+                Lukitas Claudio</p>
+
+                <p><strong>Utilería</strong><br>
+                Ingrid Hernández</p>
+
+                <p><strong>Prensa</strong><br>
+                Santi Teatro y Danza</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 32px;">
+            <div class="col-md-12">
+                <h5 class="section-title" style="text-transform: uppercase;font-size: 1em;line-height: 1.16667em; margin-bottom: .66667em;">Próximas Fechas</h5>
+                <ul>
+                    <li class="item-agenda">
+                        <div class="datetime"><time datetime="2018-11-03">Sin Fechas</time></div>
+                        <h3 class="title">El Malentendido</h3>
+                        <p><a href="" target="_blank"><span></span></a></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row"  style="margin-bottom: 32px;">
+            <div class="col-md-6">
+                <h5 class="section-title" style="text-transform: uppercase;font-size: 1em;line-height: 1.16667em; margin-bottom: .66667em;">Trailer</h5>
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/-MJJ7VUYdQY" allowfullscreen></iframe>
+                </div>
+            </div>
+         </div>
+        <div class="row mb-2">
+            <div class="col-md-8 animate-box intro-heading">
+               <h5 class="section-title" style="text-transform: uppercase;font-size: 1em;line-height: 1.16667em; margin-bottom: .66667em;">Galería</h5>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 animate-box text-center">
+                <a href="" class="work-img" style="background-image: url('/static/images/mal-1.jpg');">
+                    <!--<div class="overlay"></div>
+                    <div class="desc">
+                        <span class="icon"><i class="icon-heart-outline"></i></span>
+                        <p class="tag"><span>Illustration</span>, <span>Logo</span></p>
+                        <h3>Work 01</h3>
+                        <span class="read-more">Read more <i class="icon-arrow-right3"></i></span>
+                    </div>-->
+                </a>
+            </div>
+            <div class="col-md-6 animate-box text-center">
+                <a href="" class="work-img" style="background-image: url('/static/images/mal-2.jpg');">
+                    <!--<div class="overlay"></div>
+                    <div class="desc">
+                        <span class="icon"><i class="icon-heart-outline"></i></span>
+                        <p class="tag"><span>Web Design</span>, <span>UI</span></p>
+                        <h3>Work 02</h3>
+                        <span class="read-more">Read more <i class="icon-arrow-right3"></i></span>
+                    </div>-->
+                </a>
+            </div>
+            <div class="col-md-6 animate-box text-center">
+                <a href="" class="work-img" style="background-image: url('/static/images/mal-3.jpg');">
+                   <!-- <div class="overlay"></div>
+                    <div class="desc">
+                        <span class="icon"><i class="icon-heart-outline"></i></span>
+                        <p class="tag"><span>Logo</span>, <span>Illustration</span></p>
+                        <h3>Work 03</h3>
+                        <span class="read-more">Read more <i class="icon-arrow-right3"></i></span>
+                    </div>-->
+                </a>
+            </div>
+            <div class="col-md-6 animate-box text-center">
+                <a href="" class="work-img" style="background-image: url('/static/images/mal-4.jpg');">
+                   <!-- <div class="overlay"></div>
+                    <div class="desc">
+                        <span class="icon"><i class="icon-heart-outline"></i></span>
+                        <p class="tag"><span>Apps</span>, <span>Brand Identity</span></p>
+                        <h3>Work 04</h3>
+                        <span class="read-more">Read more <i class="icon-arrow-right3"></i></span>
+                    </div>-->
+                </a>
+            </div>
+        </div>
+    </section>
+</div>
+
+<style>
+    .item-agenda a span {
+        border-bottom: 1px solid #242d27;
+        font-size: 15px;
+    }
+
+    .item-agenda .title {
+        display: inline !important;
+        font-size: 15px;
+        line-height: 1.25em;
+        text-transform: uppercase;
+    }
+    agenda p {
+        display: inline;
+    }
+
+    .big-title, .cta, .dancer-nav span, .filters a, .filters button, .filters u, .hero text, .section-title, .super-title, .text h4, .text h5, .title {
+        font-weight: 400;
+        font-family: Impact;
+    }
+
+    .item-agenda p {
+        display: inline;
+        font-size: 15px;
+        line-height: 1.42857em;
+    }
+
+    .item-agenda .datetime, .item-agenda p {
+         display: inline;
+    }
+
+    .item-agenda .datetime {
+        display: inline;
+        font-weight: 700;
+        font-size:13px;
+        line-height: 1.25em;
+    }
+
+    .text p {
+        font-size: 14px;
+        line-height: 17px;
+        padding-bottom: 23px;
+    }
+
+
+    @media (min-width: 48em)
+    .containerobra {
+        padding: 0 2.66667em;
+    }
+
+    .containerobra {
+        position: relative;
+        width: 100%;
+        max-width: 1885px;
+        padding: 0 1.33333em;
+        clear: both;
+    }
+    .list li {
+        margin-bottom: 1.33333em;
+        text-transform: uppercase;
+    }
+    .big-title, .cta, .dancer-nav span, .filters a, .filters button, .filters u, .hero text, .section-title, .super-title, .text h4, .text h5, .title {
+        font-weight: 400;
+        font-family: Impact;
+
+    }
+    .big-title span {
+        padding-right: .16667em;
+        font-size: 1.9em;
+        line-height: 1.14286em;
+        font-family: Impact;
+        color :  #242d27
+
+    }
+
+    .big-title sup {
+        font-family: Courier,monospace;
+        <!--font-size: 1.16667em;-->
+        line-height: 1.14286em;
+        vertical-align: top;
+        top: auto;
+    }
+    p, ul {
+        margin: 0;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+    h3{
+        margin: 0;
+        font-weight: 100;
+        font-size: 1em;
+    }
+    .list a {
+        opacity: 1;
+        transition: opacity .2s linear;
+    }
+    a, a:active, a:hover, a:visited {
+        color: inherit;
+    }
+    a {
+        text-decoration: none;
+    }
+    a:hover, a.span:hover   {color: gray;    text-decoration: none;
+    }
+
+    .container {
+        padding: 0 2.66667em;
+    }
+
+    .container {
+        position: relative;
+        width: 100%;
+        <!--max-width: 1280px;-->
+        padding: 0 1.33333em;
+        clear: both;
+        margin-right: 0;
+        margin-left: 0;
+    }
+    
+</style>
+
+{% endblock %}
+
+{% block script %}
+{% endblock %}
+

@@ -1,0 +1,41 @@
+.callout {
+    position: relative;
+    overflow: hidden;
+}
+.video-bg,
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+}
+/*.video-overlay {
+    background: rgba(0,0,0,0.5);
+    pointer-events: none;
+}*/
+.video-bg video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.callout-content {
+    position: relative;
+    text-align: center;
+    margin: 50px 0; /* This adds some space around the video */
+    color: #FFF;
+    text-shadow: 0 0 5px rgba(0,0,0,0.4);
+}
+
+
+
+#logo-inicio {
+    width: 29%;
+    margin: 354px auto;
+}
