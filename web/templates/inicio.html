@@ -198,186 +198,129 @@
 </div> -->
 
 <style>
-
-	#colorlib-hero .flexslider .slides li {
-        min-height: 400px;
-	  	background-size: cover;
-	 	background-position: center;
-	 	    padding-bottom: 4%;
+    .item-agenda a span {
+        border-bottom: 1px solid #242d27;
+        font-size: 15px;
     }
 
-
-    #home_news, #home_productions {
-        padding-top: 1.33333em;
-        margin-bottom: 4em;
-    }
-
-    .section-title {
-        font-size: 2em;
-        line-height: 1.16667em;
-        margin-bottom: .66667em;
+    .item-agenda .title {
+        display: inline !important;
+        font-size: 15px;
+        line-height: 1.25em;
         text-transform: uppercase;
-        font-family: HelveticaProBlack,Helvetica,Impact,Arial,sans-serif;
+    }
+    agenda p {
+        display: inline;
     }
 
-    .item, .item a {
+    .big-title, .cta, .dancer-nav span, .filters a, .filters button, .filters u, .hero text, .section-title, .super-title, .text h4, .text h5, .title {
+        font-weight: 400;
+        font-family: Impact;
+    }
+
+    .item-agenda p {
+        display: inline;
+        font-size: 15px;
+        line-height: 1.42857em;
+    }
+
+    .item-agenda .datetime, .item-agenda p {
+         display: inline;
+    }
+
+    .item-agenda .datetime {
+        display: inline;
+        font-weight: 700;
+        font-size:13px;
+        line-height: 1.25em;
+    }
+
+    .text p {
+        font-size: 14px;
+        line-height: 17px;
+        padding-bottom: 23px;
+    }
+
+
+    @media (min-width: 48em)
+    .containerobra {
+        padding: 0 2.66667em;
+    }
+
+    .containerobra {
         position: relative;
-    }
-
-    .item {
-        display: inline-block;
-        vertical-align: top;
         width: 100%;
-        overflow-x: hidden;
-        margin-bottom: 2.66667em;
+        max-width: 1885px;
+        padding: 0 1.33333em;
+        clear: both;
+    }
+    .list li {
+        margin-bottom: 1.33333em;
+        text-transform: uppercase;
+    }
+    .big-title, .cta, .dancer-nav span, .filters a, .filters button, .filters u, .hero text, .section-title, .super-title, .text h4, .text h5, .title {
+        font-weight: 400;
+        font-family: Impact;
+
+    }
+    .big-title span {
+        padding-right: .16667em;
+        font-size: 1.9em;
+        line-height: 1.14286em;
+        font-family: Impact;
+        color :  #242d27
+
     }
 
-    .item a {
-        display: block;
+    .big-title sup {
+        font-family: Courier,monospace;
+        <!--font-size: 1.16667em;-->
+        line-height: 1.14286em;
+        vertical-align: top;
+        top: auto;
+    }
+    p, ul {
+        margin: 0;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+    h3{
+        margin: 0;
+        font-weight: 100;
+        font-size: 1em;
+    }
+    .list a {
         opacity: 1;
-        -webkit-transition: opacity .2s linear .1s;
-        transition: opacity .2s linear .1s;
+        transition: opacity .2s linear;
     }
-
-    .item, .item a {
-        position: relative;
-    }
-
     a, a:active, a:hover, a:visited {
         color: inherit;
     }
     a {
         text-decoration: none;
     }
-
-    a:focus, a:hover, button:focus, input:focus, select:focus, textarea:focus {
-        outline: none;
-        text-decoration: inherit !important;
-
+    a:hover, a.span:hover   {color: gray;    text-decoration: none;
     }
 
-    .item-prod a:after {
-        content: "";
-        display: block;
-        background: #242d27;
-        height: 2px;
-        width: 10em;
-        margin-top: 1em;
+    .container {
+        padding: 0 2.66667em;
     }
 
-    *, :after, :before, html, input[type=search] {
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
+    .container {
+        position: relative;
+        width: 100%;
+        <!--max-width: 1280px;-->
+        padding: 0 1.33333em;
+        clear: both;
+        margin-right: 0;
+        margin-left: 0;
     }
 
-    .item a:focus, a:hover, .mdzr-no-touchevents .item a:hover {
-        opacity: .5;
-        text-decoration: inherit !important;
-    }
-
-    .item-prod .title {
-        text-transform: uppercase;
-    }
-
-    .title {
-        font-size: 2em;
-        line-height: 1em;
-    }
-
-    .big-title, .cta, .dancer-nav span, .filters a, .filters button, .filters u, .hero text, .section-title, .super-title, .text h4, .text h5, .title {
-        font-weight: 700;
-        font-family: HelveticaProBlack,Helvetica,Impact,Arial,sans-serif !important;
-        font-kerning: auto;
-        font-variant-ligatures: discretionary-ligatures,contextual;
-        font-variant-numeric: diagonal-fractions;
-        font-feature-settings: "case","dlig","frac","kern","liga","ordn","ornm";
-    }
-
-    .item-prod .datetime, .item-prod p {
-        display: block;
-        font-weight: 700;
-        font-size: 0.9em;
-        line-height: 1.11111em;
-    }
-
-    p, ul {
-        margin: 0;
-        padding-left: 0px;
-    }
-
-    body {
-        font-family: Courier,monospace !important;
-        font-weight: 400 !important;
-        font-style: normal !important;
-        line-height: inherit !important;
-    }
-
-	h1, h2, h3, h4, h5, h6 {
-    	color: rgba(0, 0, 0, 0.8);
-    	font-family: "Inconsolata", monospace;
-    	font-weight: 400;
-    	margin: 0 0 0 0;
-	}
-	p{
-
- 	   font-family: Courier,monospace !important;
-
-	}
-	.title {
-    	font-size: 1em;
-    	line-height: 1em;
-	}
-
-	.section-title {
-		font-size: 2em;
-		line-height: 1.16667em;
-		margin-bottom: .66667em;
-		text-transform: uppercase;
-	}
-
-	h1, h2, h3, h4, h5, h6 {
-    	margin: 0;
-    	font-weight: 400;
-    	font-size: 1em;
-	}
-
-
-	.container {
-		position: relative;
-		width: 100%;
-		/*padding: 0 1.33333em;*/
-		clear: both;
-		margin-right: 0;
-    	margin-left: 0;
-	}
-
-	.home-container {
-    	position: relative;
-	}
-
-
-	.section-title {
-		font-size: 20px;
-		/*margin-left: 40px;*/
-	}
-
-	.cta {
-    text-transform: uppercase;
-    display: inline-block;
-    font-size: 2em;
-    line-height: 1.16667em;
-    padding-bottom: 2px;
-    border-bottom: 2px solid #242d27;
-}
 </style>
 
-<style>
-  @font-face {
-    font-family: 'abc';
-    src: url('{% static 'fonts/bootstrap/Helvetica-Black.otf' %}');
-	src: local('{% static 'fonts/bootstrap/Helvetica-Black.otf' %}');
-  }
-</style>
 {% endblock %}
 
 {% block script %}
