@@ -61,3 +61,7 @@ def compania(request):
 def bellcross(request):
     context = {}
     return render(request, 'bellcross.html', context)
+
+def admision(request):
+    context = {}
+    return render(request, 'admision.html', context)

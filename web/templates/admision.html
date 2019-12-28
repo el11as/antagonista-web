@@ -1,0 +1,230 @@
+{% extends 'index-app.html' %}
+{% load static %}
+{% block content %}
+
+<nav id="colorlib-main-nav" role="navigation">
+	<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
+	<div class="js-fullheight colorlib-table">
+		<div class="colorlib-table-cell js-fullheight">
+			<ul>
+				<li><a href="{% url 'web:inicio' %}" style="height: 120px">INICIO</a></li>
+				<li><a href="{% url 'web:obras' %}" style="height: 120px">OBRAS</a></li>
+                <li>
+                    <a href="{% url 'web:escuela' %}" style="height: 120px">ESCUELA</a>
+                </li>
+				<li><a href="{% url 'web:compania' %}"   style="height: 120px">COMPAÑIA</a></li>
+				<li><a href="{% url 'web:contacto' %}" style="height: 120px">CONTACTO</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<div id="colorlib-page">
+	<header>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="colorlib-navbar-brand">
+                        <a href="{% url 'web:inicio' %}"> <img src="{% static 'images/logo.png' %}" alt="Antagonista" style="height:100px; width:166px;"> </a>
+                    </div>
+                    <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+                </div>
+            </div>
+        </div>
+	</header>
+
+    <aside id="colorlib-hero">
+		<div class="flexslider">
+			<ul class="slides">
+                <li style="background-image: url('/static/images/cover_img_5.jpg');">
+                    <div class="overlay"></div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 col-sm-12 col-xs-12 col-md-offset-2 text-center slider-text">
+                                <div class="slider-text-inner">
+                                    <h2>Manténte Informado</h2>
+                                    <h1>Contáctanos</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+		  	</ul>
+	  	</div>
+	</aside>
+	<div id="colorlib-contact">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-10">
+					<div class="row">
+						<div class="col-md-5 animate-box">
+							<h2>Nuestra Dirección</h2>
+							<ul class="contact-info">
+								<li><i class="icon-map5"></i>Agustinas 1817 Barrio Brasil Santiago Centro</li>
+								<li><i class="icon-phone4"></i>+ 56  63940222</li>
+								<li><i class="icon-envelope2"></i><div style="font-size: 17px">contacto@teatrodelantagonista.cl</div></li>
+								<li><i class="icon-globe3"></i><a href="http://www.teatrodelantagonista.cl">www.teatrodelantagonista.cl</a></li>
+							</ul>
+						</div>
+						<div class="col-md-7 animate-box">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<input type="text" class="form-control" placeholder="Nombre">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<input type="text" class="form-control" placeholder="Email">
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="form-group">
+										<textarea name="" class="form-control" id="" cols="30" rows="7" placeholder="Mensaje"></textarea>
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="form-group pull-right">
+										<input type="submit" value="Enviar Mensaje" class="btn btn-primary">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<style>
+	.contact-info li a {
+	    font-size: 17px!important;
+	}
+    .item-agenda a span {
+        border-bottom: 1px solid #242d27;
+        font-size: 15px;
+    }
+
+    .item-agenda .title {
+        display: inline !important;
+        font-size: 15px;
+        line-height: 1.25em;
+        text-transform: uppercase;
+    }
+    agenda p {
+        display: inline;
+    }
+
+    .big-title, .cta, .dancer-nav span, .filters a, .filters button, .filters u, .hero text, .section-title, .super-title, .text h4, .text h5, .title {
+        font-weight: 400;
+        font-family: Impact;
+    }
+
+    .item-agenda p {
+        display: inline;
+        font-size: 15px;
+        line-height: 1.42857em;
+    }
+
+    .item-agenda .datetime, .item-agenda p {
+         display: inline;
+    }
+
+    .item-agenda .datetime {
+        display: inline;
+        font-weight: 700;
+        font-size:13px;
+        line-height: 1.25em;
+    }
+
+    .text p {
+        font-size: 14px;
+        line-height: 17px;
+        padding-bottom: 23px;
+    }
+
+
+    @media (min-width: 48em)
+    .containerobra {
+        padding: 0 2.66667em;
+    }
+
+    .containerobra {
+        position: relative;
+        width: 100%;
+        max-width: 1885px;
+        padding: 0 1.33333em;
+        clear: both;
+    }
+    .list li {
+        margin-bottom: 1.33333em;
+        text-transform: uppercase;
+    }
+    .big-title, .cta, .dancer-nav span, .filters a, .filters button, .filters u, .hero text, .section-title, .super-title, .text h4, .text h5, .title {
+        font-weight: 400;
+        font-family: Impact;
+
+    }
+    .big-title span {
+        padding-right: .16667em;
+        font-size: 1.9em;
+        line-height: 1.14286em;
+        font-family: Impact;
+        color :  #242d27
+
+    }
+
+    .big-title sup {
+        font-family: Courier,monospace;
+        <!--font-size: 1.16667em;-->
+        line-height: 1.14286em;
+        vertical-align: top;
+        top: auto;
+    }
+    p, ul {
+        margin: 0;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+    h3{
+        margin: 0;
+        font-weight: 100;
+        font-size: 1em;
+    }
+    .list a {
+        opacity: 1;
+        transition: opacity .2s linear;
+    }
+    a, a:active, a:hover, a:visited {
+        color: inherit;
+    }
+    a {
+        text-decoration: none;
+    }
+    a:hover, a.span:hover   {color: gray;    text-decoration: none;
+    }
+
+    .container {
+        padding: 0 2.66667em;
+    }
+
+    .container {
+        position: relative;
+        width: 100%;
+        <!--max-width: 1280px;-->
+        padding: 0 1.33333em;
+        clear: both;
+        margin-right: 0;
+        margin-left: 0;
+    }
+    
+</style>
+
+{% endblock %}
+
+{% block script %}
+{% endblock %}
