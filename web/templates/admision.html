@@ -51,29 +51,47 @@
 </div>
 <!--Modal: Name-->
 
-<div id="colorlib-page" class="a-admin modalidades" >
 
-	<div class="row">
-		<div class="span-admin banner" style="background-image: url('/static/images/head_00_ytb.jpg');background-position: center;" data-widget-type="cell" data-x="0" data-w="12">
-			<div style="background-color: rgba(0, 0, 0, 0.40);width: 100%;margin: 0px !important;padding: 60px 0;">
-				<div class="span-admin boxer" style="" data-widget-type="cell" data-x="0" data-w="12">
-					<div class="row">
-						<div class="span-admin widget-span widget-type-custom_widget " style="" data-widget-type="custom_widget" data-x="0" data-w="12">
-							<div class="span-admin">
-							  <img class="logo-modalidades" src="{% static 'images/logo.png' %}" alt="" width="190" style="width: 190px;">
-						  	<div class="span-admin" style="margin-left: 0px;">
-							    <div class="tit-carrera">
-							      <h1><span> Actuación Teatral </span></h1>
-							    </div>
-						  	</div>
-								<div style="margin-left: 0px;margin-top: 20px;">
-									<button id="btn-admision" onclick="descargar_malla()" class="btn-malla">DESCARGAR MALLA</button>
+
+<div id="colorlib-page" class="a-admin modalidades" >
+	<header>
+		<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="colorlib-navbar-brand">
+							<a href="{% url 'web:inicio' %}"> <img src="{% static 'images/logo.png' %}" alt="Antagonista" style="height:100px; width:166px;"> </a>
+						</div>
+						<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+					</div>
+				</div>
+		</div>
+	</header>
+
+	<div class="container">
+		<div class="row">
+			<div class="span-admin banner" style="background-image: url('/static/images/head_00_ytb.jpg');background-position: center;width: 100%">
+				<div style="background-color: rgba(0, 0, 0, 0.40);width: 100%;margin: 0px !important;padding: 60px 0;">
+					<div class="span-admin boxer" style="" data-widget-type="cell" data-x="0" data-w="12">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="span-admin widget-span widget-type-custom_widget " style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+									<div class="span-admin">
+									  <!-- <img class="logo-modalidades" src="{% static 'images/logo.png' %}" alt="" width="190" style="width: 190px;"> -->
+										<div class="span-admin" style="margin-left: 17px;margin-top: 129px;">
+									    <div class="tit-carrera">
+									      <h1><span> Actuación Teatral </span></h1>
+									    </div>
+								  	</div>
+										<div style="margin-left:14px;margin-top: 20px;">
+											<button id="btn-admision" onclick="descargar_malla()" class="btn-malla">DESCARGAR MALLA</button>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-  		</div>
+	  		</div>
+			</div>
 		</div>
 	</div>
 
@@ -125,8 +143,16 @@
 
 <style>
 
+  .container {
+      position: relative;
+      width: 100%;
+      clear: both;
+      margin-right: 0;
+      margin-left: 0;
+  }
+
+
 	.btn-malla {
-  	-webkit-appearance: none;
   	color: #fff;
   	border-radius: 25px;
   	border: 0px;
@@ -141,13 +167,7 @@
 	}
 
 	.modalidades .boxer {
-  	width: 1170px;
-  	margin: 0 auto !important;
-  	margin-top: 0px !important;
-  	margin-right: auto !important;
-  	margin-bottom: 0px !important;
-    margin-left: auto !important;
-    float: none;
+  	width: 100%;
 	}
 
 	.a-admin h1 {
@@ -165,20 +185,12 @@
 		font-weight: 600 !important;
 	}
 
-  /* span{
-    font-family: 'Barlow Condensed',sans-serif !important;
-	} */
-
 	.banner {
-    padding: 0px 0;
-    background-size: cover !important;
-    background-position: center;
+	  padding: 0px 0;
+	  background-size: cover !important;
+	  background-position: center;
 	}
 
-	@media (min-width: 1280px)
-	.row-admin .span-admin {
-	    width: 100%;
-	}
 </style>
 
 {% endblock %}
