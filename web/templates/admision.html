@@ -41,13 +41,13 @@
 		  </ul>
 	  </div>
 		<div class="span9" style="margin-left: 55px; margin-top: 20px;">
-			<button type="button" class="btn btn-tercero" data-toggle="modal" data-target="#m-malla" data-whatever="@mdo">DESCARGAR MALLA</button>
+			<button type="button" class="btn-tercero" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">DESCARGAR MALLA</button>
 
 		</div>
 
 <!--MODAL-->
 
-<div class="modal fade" id="m-malla" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -267,8 +267,9 @@
 
 {% block script %}
 
+
 <script>
-	$('#m-malla').on('show.bs.modal', function (event) {
+$('#exampleModal').on('show.bs.modal', function (event) {
 	  var button = $(event.relatedTarget) // Button that triggered the modal
 	  var recipient = button.data('whatever') // Extract info from data-* attributes
 	  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
@@ -276,12 +277,8 @@
 	  var modal = $(this)
 	  modal.find('.modal-title').text('New message to ' + recipient)
 	  modal.find('.modal-body input').val(recipient)
-	})
+	});
 
 </script>
-
-
-
-
 
 {% endblock %}
