@@ -2,6 +2,7 @@
 {% load static %}
 {% block content %}
 
+<!-- MENU -->
 <nav id="colorlib-main-nav" role="navigation">
 	<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
 	<div class="js-fullheight colorlib-table">
@@ -19,35 +20,8 @@
 	</div>
 </nav>
 
-<div id="colorlib-page">
-	<header>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="colorlib-navbar-brand">
-                        <a href="{% url 'web:inicio' %}"> <img src="{% static 'images/logo.png' %}" alt="Antagonista" style="height:100px; width:166px;"> </a>
-                    </div>
-                    <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
-                </div>
-            </div>
-        </div>
-	</header>
-
-	<!-- ASIDE -->
-	<aside id="colorlib-hero" style="margin-bottom:20px;">
-		<div class="flexslider">
-			<ul class="slides">
-		   		<li class="" style="background-image: url('/static/images/cover_adm_1.jpg');"></li>
-		  </ul>
-	  </div>
-		<div class="span9" style="margin-left: 55px; margin-top: 20px;">
-			<button type="button" class="btn-tercero" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">DESCARGAR MALLA</button>
-
-		</div>
-
-<!--MODAL-->
-
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!--Modal: Name-->
+<div class="modal fade" id="m-admision" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -75,7 +49,33 @@
     </div>
   </div>
 </div>
-</aside>
+<!--Modal: Name-->
+
+<div id="colorlib-page" class="a-admin modalidades" >
+
+	<div class="row">
+		<div class="span-admin banner" style="background-image: url('/static/images/head_00_ytb.jpg');background-position: center;" data-widget-type="cell" data-x="0" data-w="12">
+			<div style="background-color: rgba(0, 0, 0, 0.40);width: 100%;margin: 0px !important;padding: 60px 0;">
+				<div class="span-admin boxer" style="" data-widget-type="cell" data-x="0" data-w="12">
+					<div class="row">
+						<div class="span-admin widget-span widget-type-custom_widget " style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+							<div class="span-admin">
+							  <img class="logo-modalidades" src="{% static 'images/logo.png' %}" alt="" width="190" style="width: 190px;">
+						  	<div class="span-admin" style="margin-left: 0px;">
+							    <div class="tit-carrera">
+							      <h1><span> Actuación Teatral </span></h1>
+							    </div>
+						  	</div>
+								<div style="margin-left: 0px;margin-top: 20px;">
+									<button id="btn-admision" onclick="descargar_malla()" class="btn-malla">DESCARGAR MALLA</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+  		</div>
+		</div>
+	</div>
 
 	<div id="colorlib-contact">
 		<div class="container">
@@ -120,143 +120,65 @@
 			</div>
 		</div>
 	</div>
+
 </div>
 
 <style>
-	.contact-info li a {
-	    font-size: 17px!important;
+
+	.btn-malla {
+  	-webkit-appearance: none;
+  	color: #fff;
+  	border-radius: 25px;
+  	border: 0px;
+  	text-transform: uppercase;
+  	font-size: 12px;
+    background: #ff036b;
+  	float: left;
+    padding: 7px 25px;
+    margin-right: 10px;
+    margin-bottom: 15PX;
+    cursor: pointer;
 	}
-    .item-agenda a span {
-        border-bottom: 1px solid #242d27;
-        font-size: 15px;
-    }
 
-    .item-agenda .title {
-        display: inline !important;
-        font-size: 15px;
-        line-height: 1.25em;
-        text-transform: uppercase;
-    }
-    agenda p {
-        display: inline;
-    }
+	.modalidades .boxer {
+  	width: 1170px;
+  	margin: 0 auto !important;
+  	margin-top: 0px !important;
+  	margin-right: auto !important;
+  	margin-bottom: 0px !important;
+    margin-left: auto !important;
+    float: none;
+	}
 
-    .big-title, .cta, .dancer-nav span, .filters a, .filters button, .filters u, .hero text, .section-title, .super-title, .text h4, .text h5, .title {
-        font-weight: 400;
-        font-family: Impact;
-    }
+	.a-admin h1 {
+    line-height: 42px !important;
+    margin: 0 !important;
+    margin-bottom: 50px !important;
+	}
 
-    .item-agenda p {
-        display: inline;
-        font-size: 15px;
-        line-height: 1.42857em;
-    }
+	.tit-carrera h1 span {
+    background-color: #de5b15;
+    padding: 0px 5px 5px;
+    text-transform: uppercase;
+		font-size: 42px !important;
+		color: #fff !important;
+		font-weight: 600 !important;
+	}
 
-    .item-agenda .datetime, .item-agenda p {
-         display: inline;
-    }
+  /* span{
+    font-family: 'Barlow Condensed',sans-serif !important;
+	} */
 
-    .item-agenda .datetime {
-        display: inline;
-        font-weight: 700;
-        font-size:13px;
-        line-height: 1.25em;
-    }
+	.banner {
+    padding: 0px 0;
+    background-size: cover !important;
+    background-position: center;
+	}
 
-    .text p {
-        font-size: 14px;
-        line-height: 17px;
-        padding-bottom: 23px;
-    }
-
-
-    @media (min-width: 48em)
-    .containerobra {
-        padding: 0 2.66667em;
-    }
-
-    .containerobra {
-        position: relative;
-        width: 100%;
-        max-width: 1885px;
-        padding: 0 1.33333em;
-        clear: both;
-    }
-    .list li {
-        margin-bottom: 1.33333em;
-        text-transform: uppercase;
-    }
-    .big-title, .cta, .dancer-nav span, .filters a, .filters button, .filters u, .hero text, .section-title, .super-title, .text h4, .text h5, .title {
-        font-weight: 400;
-        font-family: Impact;
-
-    }
-    .big-title span {
-        padding-right: .16667em;
-        font-size: 1.9em;
-        line-height: 1.14286em;
-        font-family: Impact;
-        color :  #242d27
-
-    }
-
-    .big-title sup {
-        font-family: Courier,monospace;
-        <!--font-size: 1.16667em;-->
-        line-height: 1.14286em;
-        vertical-align: top;
-        top: auto;
-    }
-    p, ul {
-        margin: 0;
-    }
-
-    ul {
-        list-style: none;
-        padding: 0;
-    }
-    h3{
-        margin: 0;
-        font-weight: 100;
-        font-size: 1em;
-    }
-    .list a {
-        opacity: 1;
-        transition: opacity .2s linear;
-    }
-    a, a:active, a:hover, a:visited {
-        color: inherit;
-    }
-    a {
-        text-decoration: none;
-    }
-    a:hover, a.span:hover   {color: gray;    text-decoration: none;
-    }
-
-    .container {
-        padding: 0 2.66667em;
-    }
-
-    .container {
-        position: relative;
-        width: 100%;
-        <!--max-width: 1280px;-->
-        padding: 0 1.33333em;
-        clear: both;
-        margin-right: 0;
-        margin-left: 0;
-    }
-
-		.btn-tercero {
-    background: #dc0cb9;
-    color: #ffffff;
-    border: 0px solid #ffffff;
-		border-radius: 23px 23px 23px 23px;
-		-moz-border-radius: 23px 23px 23px 23px;
-		-webkit-border-radius: 23px 23px 23px 23px;
-
-}
-
+	@media (min-width: 1280px)
+	.row-admin .span-admin {
+	    width: 100%;
+	}
 </style>
 
 {% endblock %}
@@ -264,17 +186,12 @@
 {% block script %}
 
 <script>
+	$(document).ready(function() {
+	});
 
-	$('#exampleModal').on('show.bs.modal', function (event) {
-  var button = $(event.relatedTarget) // Button that triggered the modal
-  var recipient = button.data('whatever') // Extract info from data-* attributes
-  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-  var modal = $(this)
-  modal.find('.modal-title').text('New message to ' + recipient)
-  modal.find('.modal-body input').val(recipient)
-
-});
+	function descargar_malla(){
+		$('#m-admision').modal('show')
+	}
 
 </script>
 
