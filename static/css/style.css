@@ -15,7 +15,7 @@
 
 /* =======================================================
 *
-* 	Template Style 
+* 	Template Style
 *	Edit this section
 *
 * ======================================================= */
@@ -179,7 +179,7 @@ h1, h2, h3, h4, h5, h6 {
         color: white;
         font-size: 100px;
         padding: 0px 0;
-        text-transform: uppercase; 
+        text-transform: uppercase;
         /*font-family: impact;*/
         font-family: impact,HelveticaNeue-CondensedBlack;
         letter-spacing: 8px;}
@@ -226,27 +226,27 @@ header {
 
 #colorlib-hero {
   width: 100%;
-  float: left; 
+  float: left;
 }
-  
+
   #colorlib-hero .flexslider {
     border: none;
     z-index: 1;
-    margin-bottom: 0; 
+    margin-bottom: 0;
   }
-    
+
   #colorlib-hero .flexslider .slides {
       position: relative;
-      overflow: hidden; 
+      overflow: hidden;
   }
-      
+
   #colorlib-hero .flexslider .slides li {
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
         min-height: 400px;
         position: relative; }
-        
+
   #colorlib-hero .flexslider .slides li .overlay {
       position: absolute;
       top: 0;
@@ -254,7 +254,7 @@ header {
       left: 0;
       right: 0;
   }
-    
+
     #colorlib-hero .flexslider .flex-control-nav {
       bottom: 2em;
       z-index: 1000;
@@ -1149,7 +1149,7 @@ input[type="text"] {
   padding: 1em 0;
   display: block;
   width: 100%;
-  background: #000; }
+  background: #4a494a; }
   #footer h2 {
     font-size: 30px;
     color: #fff;
