@@ -110,43 +110,29 @@
 					<!-- Formulario -->
 					<div class="col-md-4 animate-box formulario" style="margin: -115px 18px;">
 						<div class="row">
-							<h3 id="hs_cos_wrapper_module_15423967252351851_title" class="hs_cos_wrapper form-title" data-hs-cos-general-type="widget_field" data-hs-cos-type="text">INFÓRMATE MÁS AQUÍ</h3>
-
-							<div class="col-md-6">
-								<div class="form-group">
-									<input type="text" class="form-control" placeholder="Nombre">
+							<h3 id="t-admision" class="hs_cos_wrapper form-title" data-hs-cos-general-type="widget_field" data-hs-cos-type="text">INFÓRMATE MÁS AQUÍ</h3>
+							<form id="f-admision" action="{% url 'web:registrar' %}" role="form" method="post">
+								<div class="col-md-6">
+									<div class="form-group">
+										<input id="admin-nombre" name="a-nombre" type="text" class="form-control" placeholder="Nombre">
+									</div>
 								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="form-group">
-									<input type="text" class="form-control" placeholder="Apellido">
+								<div class="col-md-6">
+									<div class="form-group">
+										<input id="admin-apellod" name="a-apellido" type="text" class="form-control" placeholder="Apellido">
+									</div>
 								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="form-group">
-									<input type="text" class="form-control" placeholder="Email">
+								<div class="col-md-6">
+									<div class="form-group">
+										<input id="admin-email" name="a-email"  type="mail" class="form-control" placeholder="Email">
+									</div>
 								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="form-group">
-									<input type="text" class="form-control" placeholder="Email">
+								<div class="col-md-12">
+									<div class="form-group pull-right">
+										<input type="submit" value="Enviar Mensaje" class="btn btn-primary">
+									</div>
 								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="form-group">
-									<input type="text" class="form-control" placeholder="Email">
-								</div>
-							</div>
-							<div class="col-md-12">
-								<div class="form-group">
-									<textarea name="" class="form-control" id="" cols="30" rows="7" placeholder="Mensaje"></textarea>
-								</div>
-							</div>
-							<div class="col-md-12">
-								<div class="form-group pull-right">
-									<input type="submit" value="Enviar Mensaje" class="btn btn-primary">
-								</div>
-							</div>
+							</form>
 						</div>
 					</div>
 				</div>
@@ -230,11 +216,62 @@
 
 <script>
 	$(document).ready(function() {
+		validar_adminision()
 	});
 
 	function descargar_malla(){
 		$('#m-admision').modal('show')
 	}
+
+	function validar_adminision() {
+		console.log('validar_adminision')
+    $("#f-admision").validate({
+        'rules': {
+          'a-nombre': {
+              'required': true,
+          },
+          'a-apellido': {
+              'required': true,
+          },
+          'a-email': {
+              'required': true,
+              'email': true,
+          },
+        },
+        errorPlacement: function(error, element) {
+            console.log('errorPlacement')
+            element.closest(".form-group").find('.container-error').html('')
+            error.appendTo(element.closest(".form-group").find('.container-error'));
+        },
+        submitHandler: function(form) {
+
+            $("#f-admision").ajaxSubmit({
+                dataType: 'json',
+                beforeSend: function() {
+									console.log('beforeSend')
+                    // loading({
+                    //     active: true,
+                    //     description: 'Editando empresa.'
+                    // })
+                },
+                success: function(response) {
+									console.log(response)
+                  // loading({active: false})
+
+                },
+                error: function(data, a, t) {
+										console.log(data)
+                    // loading({active: false})
+                    // notification_toastr({
+                    //     title: 'Empresa',
+                    //     message: 'Ocurrio un error, contactarse con el administrador',
+                    //     type: 'error'
+                    // })
+                }
+            });
+        }
+    });
+}
 
 </script>
 

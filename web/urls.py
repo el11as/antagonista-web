@@ -1,7 +1,6 @@
 from django.conf.urls import url
 
 from . import views
-#app
 
 app_name = 'web'
 
@@ -21,8 +20,7 @@ urlpatterns = [
     url(r'^direcciones/$', views.direcciones, name='direcciones'),
     url(r'^brujas/$', views.brujas, name='brujas'),
     url(r'^bellcross/$', views.bellcross, name='bellcross'),
-    url(r'^admision/$', views.admision, name='admision')
-        
-
+    url(r'^admision/$', views.admision, name='admision'),
+    url('registrar/', views.registrar, name='registrar')
 
 ]

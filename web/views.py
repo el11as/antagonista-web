@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from django.http import HttpResponse, HttpResponseRedirect, JsonResponse, HttpResponseServerError
+from utilidades.views import *
 
 # Create your views here.
 
@@ -15,7 +17,6 @@ def inicio(request):
 
 def contacto(request):
     context = {}
-    print('Estoy en contacto')
     return render(request, 'contacto.html', context)
 
 def obras(request):
@@ -65,3 +66,38 @@ def bellcross(request):
 def admision(request):
     context = {}
     return render(request, 'admision.html', context)
+
+def registrar(request):
+    print(request.POST)
+
+    try:
+
+        status = True
+        message = 'Evio de correo'
+        error   = 'Envio de correo exitoso'
+
+        enviar_mail(
+            html = True,
+            to_email = ['elias.gomezfuentes@gmail.com', 'kgomez.ici@gmail.com'],
+            subject = 'Nuevo Registro',
+            message = 'mail/nuevo-admin.html',
+            data = {
+                'nombre'   : request.POST.get('a-nombre'),
+                'apellido' : request.POST.get('a-apellido'),
+                'email'    : request.POST.get('a-email'),
+            },
+        )
+
+        return JsonResponse({
+            'status'  : status,
+            'message' : message,
+            'error'   : error
+        })
+
+    except Exception as e:
+
+        return JsonResponse({
+            'status'  : status,
+            'message' : message,
+            'error'   : str(e)
+        }, status = 500)

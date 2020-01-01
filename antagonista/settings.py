@@ -129,7 +129,13 @@ STATICFILES_DIRS = (
 LOGIN_URL = 'login/'
 LOGOUT_URL = 'logout/'
 
+EMAIL_USE_TLS       = True
+EMAIL_HOST          = 'smtp.gmail.com'
+EMAIL_PORT          = 25
+EMAIL_HOST_USER     = 'elias.gomezfuentes@gmail.com'
+EMAIL_HOST_PASSWORD = 'Egf61629382'
+EMAIL_BACKEND       = 'django.core.mail.backends.smtp.EmailBackend'
+
 
 # MEDIA_ROOT = os.path.join(BASE_DIR,'public', 'media')
 # MEDIA_URL = '/media/'
-
