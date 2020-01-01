@@ -1210,3 +1210,17 @@ input[type="text"] {
 
 .js .animate-box {
   opacity: 0; }
+
+.blockUI.blockMsg.blockPage h1 {
+    font-size: 18px;
+    color: #fff !important;
+    font-weight: 400;
+    font-size: 30px;
+    margin: 10px 0px;
+}
+
+.blockUI.blockMsg.blockPage p {
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff !important;
+}

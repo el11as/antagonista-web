@@ -33,11 +33,11 @@
       <div class="modal-body">
         <form id="f-malla" action="{% url 'web:enviar_malla' %}" role="form" method="post">
           <div class="form-group">
-						<label for="recipient-name" class="col-form-label">Nombre:</label>
+						<label for="recipient-nombe" class="col-form-label">Nombre:</label>
 						<input name='m-nombre' type="text" class="form-control" id="recipient-name">
-            <label for="recipient-name" class="col-form-label">Email:</label>
+            <label for="recipient-email" class="col-form-label">Email:</label>
 						<input name='m-email' type="text" class="form-control" id="recipient-name">
-						<label for="recipient-name" class="col-form-label">Teléfono:</label>
+						<label for="recipient-telefono" class="col-form-label">Teléfono:</label>
             <input name='m-fono' type="text" class="form-control" id="recipient-name">
           </div>
         </form>
@@ -225,7 +225,6 @@
 	}
 
 	function enviar_malla(){
-		console.log('enviar_malla')
 		$('#f-malla').submit();
 	}
 
@@ -253,20 +252,18 @@
             $("#f-admision").ajaxSubmit({
                 dataType: 'json',
                 beforeSend: function() {
-									console.log('beforeSend')
-                    // loading({
-                    //     active: true,
-                    //     description: 'Editando empresa.'
-                    // })
+									$('#m-admision').modal('hide')
+                  loading({
+                      active: true,
+                      description: 'Enviado información.'
+                  })
                 },
                 success: function(response) {
-									console.log(response)
-                  // loading({active: false})
+                  loading({active: false})
 
                 },
                 error: function(data, a, t) {
-										console.log(data)
-                    // loading({active: false})
+                    loading({active: false})
                     // notification_toastr({
                     //     title: 'Empresa',
                     //     message: 'Ocurrio un error, contactarse con el administrador',
@@ -279,7 +276,6 @@
 	}
 
 	function valida_malla(){
-		console.log('valida_malla')
 		$("#f-malla").validate({
         'rules': {
           'm-email': {
@@ -297,20 +293,18 @@
             $("#f-malla").ajaxSubmit({
                 dataType: 'json',
                 beforeSend: function() {
-									console.log('beforeSend')
-                    // loading({
-                    //     active: true,
-                    //     description: 'Editando empresa.'
-                    // })
+										$('#m-admision').modal('hide')
+                    loading({
+                        active: true,
+                        description: 'Enviando información.'
+                    })
                 },
                 success: function(response) {
-									console.log(response)
-                  // loading({active: false})
+                  loading({active: false})
 
                 },
                 error: function(data, a, t) {
-										console.log(data)
-                    // loading({active: false})
+                    loading({active: false})
                     // notification_toastr({
                     //     title: 'Empresa',
                     //     message: 'Ocurrio un error, contactarse con el administrador',
