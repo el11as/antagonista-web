@@ -111,7 +111,7 @@ def enviar_malla(request):
             to_email = [request.POST.get('m-email')],
             subject = 'Malla Curricular Antagonista',
             message = 'mail/malla-2020.html',
-            attach  = 'static/images/malla-2020.png',
+            attach  = 'static/images/malla_2020.png',
         )
 
         return JsonResponse({
