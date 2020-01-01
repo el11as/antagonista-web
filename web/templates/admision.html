@@ -34,9 +34,11 @@
         <form id="f-malla" action="{% url 'web:enviar_malla' %}" role="form" method="post">
           <div class="form-group">
 						<label for="recipient-name" class="col-form-label">Nombre:</label>
+						<input name='m-nombre' type="text" class="form-control" id="recipient-name">
             <label for="recipient-name" class="col-form-label">Email:</label>
+						<input name='m-email' type="text" class="form-control" id="recipient-name">
 						<label for="recipient-name" class="col-form-label">Teléfono:</label>
-            <input name='m-email' type="text" class="form-control" id="recipient-name">
+            <input name='m-fono' type="text" class="form-control" id="recipient-name">
           </div>
         </form>
       </div>
