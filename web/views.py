@@ -76,7 +76,7 @@ def registrar(request):
 
         enviar_mail(
             html = True,
-            to_email = ['elias.gomezfuentes@gmail.com'],
+            to_email = [request.POST.get('a-email')],
             subject = 'Nuevo Registro',
             message = 'mail/nuevo-admin.html',
             data = {
