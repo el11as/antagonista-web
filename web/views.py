@@ -68,8 +68,6 @@ def admision(request):
     return render(request, 'admision.html', context)
 
 def registrar(request):
-    print(request.POST)
-
     try:
 
         status = True
@@ -78,7 +76,7 @@ def registrar(request):
 
         enviar_mail(
             html = True,
-            to_email = ['elias.gomezfuentes@gmail.com', 'kgomez.ici@gmail.com'],
+            to_email = ['elias.gomezfuentes@gmail.com'],
             subject = 'Nuevo Registro',
             message = 'mail/nuevo-admin.html',
             data = {
@@ -86,6 +84,34 @@ def registrar(request):
                 'apellido' : request.POST.get('a-apellido'),
                 'email'    : request.POST.get('a-email'),
             },
+        )
+
+        return JsonResponse({
+            'status'  : status,
+            'message' : message,
+            'error'   : error
+        })
+
+    except Exception as e:
+
+        return JsonResponse({
+            'status'  : status,
+            'message' : message,
+            'error'   : str(e)
+        }, status = 500)
+
+def enviar_malla(request):
+    try:
+        status = True
+        message = 'Evio de correo'
+        error   = 'Envio de correo exitoso'
+
+        enviar_mail(
+            html = True,
+            to_email = [request.POST.get('m-email')],
+            subject = 'Malla Curricular Antagonista',
+            message = 'mail/malla-2020.html',
+            attach  = 'static/images/malla-2020.png',
         )
 
         return JsonResponse({

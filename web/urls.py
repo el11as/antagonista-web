@@ -21,6 +21,7 @@ urlpatterns = [
     url(r'^brujas/$', views.brujas, name='brujas'),
     url(r'^bellcross/$', views.bellcross, name='bellcross'),
     url(r'^admision/$', views.admision, name='admision'),
-    url('registrar/', views.registrar, name='registrar')
+    url('registrar/', views.registrar, name='registrar'),
+    url('enviar-malla/', views.enviar_malla, name='enviar_malla')
 
 ]

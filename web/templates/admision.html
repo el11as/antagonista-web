@@ -31,20 +31,16 @@
         </button>
       </div>
       <div class="modal-body">
-        <form>
+        <form id="f-malla" action="{% url 'web:enviar_malla' %}" role="form" method="post">
           <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Recipient:</label>
-            <input type="text" class="form-control" id="recipient-name">
-          </div>
-          <div class="form-group">
-            <label for="message-text" class="col-form-label">Message:</label>
-            <textarea class="form-control" id="message-text"></textarea>
+            <label for="recipient-name" class="col-form-label">Email:</label>
+            <input name='m-email' type="text" class="form-control" id="recipient-name">
           </div>
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Send message</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <button type="button" onclick='enviar_malla()' class="btn btn-primary">Enviar</button>
       </div>
     </div>
   </div>
@@ -216,15 +212,20 @@
 
 <script>
 	$(document).ready(function() {
-		validar_adminision()
+		validar_adminision();
+		valida_malla();
 	});
 
 	function descargar_malla(){
 		$('#m-admision').modal('show')
 	}
 
+	function enviar_malla(){
+		console.log('enviar_malla')
+		$('#f-malla').submit();
+	}
+
 	function validar_adminision() {
-		console.log('validar_adminision')
     $("#f-admision").validate({
         'rules': {
           'a-nombre': {
@@ -271,7 +272,51 @@
             });
         }
     });
-}
+	}
+
+	function valida_malla(){
+		console.log('valida_malla')
+		$("#f-malla").validate({
+        'rules': {
+          'm-email': {
+              'required': true,
+              'email': true,
+          },
+        },
+        errorPlacement: function(error, element) {
+            console.log('errorPlacement')
+            element.closest(".form-group").find('.container-error').html('')
+            error.appendTo(element.closest(".form-group").find('.container-error'));
+        },
+        submitHandler: function(form) {
+
+            $("#f-malla").ajaxSubmit({
+                dataType: 'json',
+                beforeSend: function() {
+									console.log('beforeSend')
+                    // loading({
+                    //     active: true,
+                    //     description: 'Editando empresa.'
+                    // })
+                },
+                success: function(response) {
+									console.log(response)
+                  // loading({active: false})
+
+                },
+                error: function(data, a, t) {
+										console.log(data)
+                    // loading({active: false})
+                    // notification_toastr({
+                    //     title: 'Empresa',
+                    //     message: 'Ocurrio un error, contactarse con el administrador',
+                    //     type: 'error'
+                    // })
+                }
+            });
+        }
+    });
+	}
 
 </script>
 
