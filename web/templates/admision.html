@@ -84,7 +84,6 @@
 										<div style="margin-left:50px;margin-top: 20px">
 											<button id="btn-admision" onclick="descargar_malla()" class="btn-malla">DESCARGAR MALLA</button>
 										</div>
-
 									</div>
 								</div>
 							</div>
@@ -93,36 +92,27 @@
 	  		</div>
 			</div>
 		</div>
-	</div>
 
-
-	<div id="colorlib-contact">
-		<div class="container">
-			<div class="row">
-
-				<div class="col-md-12" style="padding: 0 2.66667em">
-
+		<!-- Nuestra Escuela -->
+		<section id="d-ESCUELA" class="contact-section section-padding mb-30 mt-30">
+		  <div class="container">
+		    <div class="row text-center animate-box">
 					<div class="col-md-7 animate-box">
-						<h5 class="section-title" style="text-transform: uppercase;font-size: 1em;line-height: 1.16667em; margin-bottom: .66667em;">Nuestra Escuela</h5>
-						<ul class="">
-							<p style="margin-bottom: 24px;font-family: Courier,monospace; text-align: justify;font-size: 16px">
-
-		                    El Teatro Escuela, es una institución de Estudios Superiores, enfocada en la formación de Actrices y Actores de nivel profesional.<br>
-												La escuela, define su preocupación por una formación teatral íntegra, mediante un proceso en el cual el alumno concreta la integración
-												de sus facultades crearivas, como un ser capaz de establecer relaciones con el entorno en el que le corresponde desempeñarse, vinculándose en
-												el medio teatral desde el primer año de ingreso.<br>
-												En la metodología del Teatro Escuela, el estudiante es el factor activo de su propia creación, especialmente en las asignaturas troncales:
-												Actuación, Movimiento y Voz, con un sello marcado en lo práctico.<br>
-												La Malla Curricular de la Escuela, establece un plan común de tres años y un línea de formación específica en el primer semestre del cuarto
-												año, en la cual el estudiante podrá optar por la mención de Interpretación o de Realización Escénica. Ambas menciones, se interelacionan en
-												la preparación de su egreso respectivo, al final de la carrera.La malla, establece un sistema de créditos que aseguran que el estudiante se forme de acuerdo a las exigencias del medio teatral profesional.
-
-							</p>
-						</ul>
+						<h5 class="section-title" style="text-transform: uppercase;font-size: 1em;text-align:left;">NUESTRA ESCUELA</h5>
+						<p style="margin-bottom: 24px;font-family: Courier,monospace; text-align: justify;font-size: 16px">
+							El Teatro Escuela, es una institución de Estudios Superiores, enfocada en la formación de Actrices y Actores de nivel profesional.<br>
+							La escuela, define su preocupación por una formación teatral íntegra, mediante un proceso en el cual el alumno concreta la integración
+							de sus facultades crearivas, como un ser capaz de establecer relaciones con el entorno en el que le corresponde desempeñarse, vinculándose en
+							el medio teatral desde el primer año de ingreso.<br>
+							En la metodología del Teatro Escuela, el estudiante es el factor activo de su propia creación, especialmente en las asignaturas troncales:
+							Actuación, Movimiento y Voz, con un sello marcado en lo práctico.<br>
+							La Malla Curricular de la Escuela, establece un plan común de tres años y un línea de formación específica en el primer semestre del cuarto
+							año, en la cual el estudiante podrá optar por la mención de Interpretación o de Realización Escénica. Ambas menciones, se interelacionan en
+							la preparación de su egreso respectivo, al final de la carrera.La malla, establece un sistema de créditos que aseguran que el estudiante se
+							forme de acuerdo a las exigencias del medio teatral profesional.
+						</p>
 					</div>
-
-					<!-- Formulario -->
-					<div class="col-md-3 animate-box formulario" style="margin: -200px 30px;">
+					<div class="col-md-offset-1 col-md-3 animate-box formulario">
 						<div class="row">
 							<h3 id="t-admision" class="hs_cos_wrapper form-title" data-hs-cos-general-type="widget_field" data-hs-cos-type="text">MÁS INFORMACIÓN AQUÍ</h3>
 							<form id="f-admision" action="{% url 'web:registrar' %}" role="form" method="post">
@@ -172,69 +162,139 @@
 							</form>
 						</div>
 					</div>
+		  	</div>
+		  </div>
+		</section>
+
+		<!-- Razones y Beneficios -->
+		<section id="r-escuela" class="contact-section section-padding mb-30">
+		  <div class="container">
+		    <div class="row justify-content-md-center row animate-box">
+					<div class="col-md-4 animate-box">
+						<h5 class="section-title" style="text-transform: uppercase;font-size: 1em;line-height: 1.16667em; margin-bottom: .66667em;">CAMPO OCUPACIONAL</h5>
+						<ul class="listaprodserv">
+							<li class="listaprodserv">Actuación para teatro.</li>
+							<li class="listaprodserv">Realización Escénica.</li>
+							<li class="listaprodserv">Especialidades teatrales: dirección, producción, diseño escénico, dramaturgia, danza.</li>
+							<li class="listaprodserv">Gestión y producción cultural.</li>
+							<li class="listaprodserv">Docencia e investigación.</li>
+						</ul>
+					</div>
+					<div class="col-md-4 animate-box">
+						<h5 class="section-title" style="text-transform: uppercase;font-size: 1em;line-height: 1.16667em; margin-bottom: .66667em;">¿POR QUÉ TEATRO ESCUELA?</h5>
+						<ul class="listaprodserv">
+							<li class="listaprodserv">Carrera con un marcado sello en la puesta en escena.</li>
+							<li class="listaprodserv">Modelo de Enseñanza que amplía las posibilidades laborales.</li>
+							<li class="listaprodserv">Cuerpo docente idóneo y con actividad vigente en el medio.</li>
+							<li class="listaprodserv">Sede privilegiada en barrio Brasil.</li>
+							<li class="listaprodserv">Biblioteca y Videoteca especializada.</li>
+							<li class="listaprodserv">Convenio con Fonoadiólogos.</li>
+						</ul>
+					</div>
+					<div class="col-md-4 animate-box">
+						<h5 class="section-title" style="text-transform: uppercase;font-size: 1em;line-height: 1.16667em; margin-bottom: .66667em;">REQUISITOS</h5>
+						<ul class="listaprodserv">
+							<li class="listaprodserv">Postulantes chilenos y extranjeros deben presentar su licencia de enseñanza media chilena original o legalizada ante notario.</li>
+							<li class="listaprodserv">Presentar fotocopia clara y legible de ambas caras de la cédula de identidad.</li>
+							<li class="listaprodserv">Cumplir con los demás requisitos que para el ingreso establezca el Teatro Escuela</li>
+						</ul>
+					</div>
+		  	</div>
+
+		  </div>
+		</section>
+
+		<!-- Contacto -->
+		<section id="c-escuela" class="contact-section section-padding mb-30">
+		  <div class="container">
+		    <div class="row text-center  animate-box">
+					<h5 class="section-title" style="text-transform: uppercase;font-size: 1em;text-align:center;">CONTACTO</h5>
+		      <div class="col-sm-6 col-md-4 mb-4 animated" data-animate="ts-fadeInUp" style="visibility: visible;">
+		          <i class="icon-map5"></i>
+		          <div>
+		              <figure class="mb-0">Agustinas 1817 Barrio Brasil</figure>
+		              <figure>Santiago</figure>
+		          </div>
+
+		      </div>
+		      <div class="col-sm-6 col-md-2 mb-4 ts-fadeInUp animated" data-animate="ts-fadeInUp" data-delay=".1s" style="animation-delay: 0.1s; visibility: visible;">
+		          <i class="icon-phone4"></i>
+		          <div class="ts-opacity__50">
+		              <figure class="mb-0">+56974324328</figure>
+		          </div>
+		      </div>
+		      <div class="col-sm-6 col-md-3 mb-4 ts-fadeInUp animated" data-animate="ts-fadeInUp" data-delay=".2s" style="animation-delay: 0.2s; visibility: visible;">
+		          <i class="icon-envelope2"></i>
+		          <div class="ts-opacity__50">
+		              <figure class="mb-0">admision@teatroescuela.cl</figure>
+		          </div>
+		      </div>
+		      <div class="col-sm-6 col-md-3 mb-4 ts-fadeInUp animated" data-animate="ts-fadeInUp" data-delay=".3s" style="animation-delay: 0.3s; visibility: visible;">
+		          <i class="icon-globe3"></i>
+		          <div class="ts-opacity__50">
+		              <figure><a href="/">www.teatrodelantagonista.cl</a></figure>
+		          </div>
+		      </div>
+		  	</div>
+		  </div>
+		</section>
+	</div>
+</div>
 
 
-					<div class="col-md-12">
-						<div class="col-md-4 animate-box">
-							<h5 class="section-title" style="text-transform: uppercase;font-size: 1em;line-height: 1.16667em; margin-bottom: .66667em;">CAMPO OCUPACIONAL</h5>
-							<ul style="padding: 0 1.66667em">
-
-													<li style="margin-bottom: 5px;font-family: Courier,monospace; text-align: justify;font-size: 14px" type="disc">Actuación para teatro.</li>
-													<li style="margin-bottom: 5px;font-family: Courier,monospace; text-align: justify;font-size: 14px" type="disc">Realización Escénica.</li>
-													<li style="margin-bottom: 5px;font-family: Courier,monospace; text-align: justify;font-size: 14px" type="disc">Especialidades teatrales: dirección, producción, diseño escénico, dramaturgia, danza.</li>
-													<li style="margin-bottom: 5px;font-family: Courier,monospace; text-align: justify;font-size: 14px" type="disc">Gestión y producción cultural.</li>
-													<li style="margin-bottom: 5px;font-family: Courier,monospace; text-align: justify;font-size: 14px" type="disc">Docencia e investigación.</li>
-							</ul>
-
-						</div>
-
-						<div class="col-md-4 animate-box">
-							<h5 class="section-title" style="text-transform: uppercase;font-size: 1em;line-height: 1.16667em; margin-bottom: .66667em;">¿POR QUÉ TEATRO ESCUELA?</h5>
-							<ul style="padding: 0 1.66667em">
-
-													<li style="margin-bottom: 5px;font-family: Courier,monospace; text-align: justify;font-size: 14px" type="disc">Carrera con un marcado sello en la puesta en escena.</li>
-													<li style="margin-bottom: 5px;font-family: Courier,monospace; text-align: justify;font-size: 14px" type="disc">Modelo de Enseñanza que amplía las posibilidades laborales.</li>
-													<li style="margin-bottom: 5px;font-family: Courier,monospace; text-align: justify;font-size: 14px" type="disc">Cuerpo docente idóneo y con actividad vigente en el medio.</li>
-													<li style="margin-bottom: 5px;font-family: Courier,monospace; text-align: justify;font-size: 14px" type="disc">Sede privilegiada en barrio Brasil.</li>
-													<li style="margin-bottom: 5px;font-family: Courier,monospace; text-align: justify;font-size: 14px" type="disc">Biblioteca y Videoteca especializada.</li>
-													<li style="margin-bottom: 5px;font-family: Courier,monospace; text-align: justify;font-size: 14px" type="disc">Convenio con Fonoadiólogos.</li>
-							</ul>
-						</div>
-
-						<div class="col-md-4 animate-box">
-							<h5 class="section-title" style="text-transform: uppercase;font-size: 1em;line-height: 1.16667em; margin-bottom: .66667em;">REQUISITOS</h5>
-							<ul style="padding: 0 1.66667em">
-
-													<li style="margin-bottom: 5px;font-family: Courier,monospace; text-align: justify;font-size: 14px" type="disc">Postulantes chilenos y extranjeros deben presentar su licencia de enseñanza media chilena original o legalizada ante notario.</li>
-													<li style="margin-bottom: 5px;font-family: Courier,monospace; text-align: justify;font-size: 14px" type="disc">Presentar fotocopia clara y legible de ambas caras de la cédula de identidad.</li>
-													<li style="margin-bottom: 5px;font-family: Courier,monospace; text-align: justify;font-size: 14px" type="disc">Cumplir con los demás requisitos que para el ingreso establezca el Teatro Escuela</li>
-
-							</ul>
-						</div>
-				</div>
-
-				<div class="col-md-12">
-					<div class="col-md-12 animate-box">
-							<h5 class="section-title" style="text-transform: uppercase;font-size: 1em;line-height: 1.16667em; margin-bottom: .66667em;">UBICACIÓN</h5>
-							<ul class="contact-info">
-								<li><i class="icon-map5"></i><span>Agustinas 1817 Barrio Brasil Santiago Centro</span></li>
-								<li><i class="icon-phone4"></i><span>+ 56 9 74324328</span></li>
-								<li><i class="icon-envelope2"></i><span> admision@teatroescuela.cl</span>
-								<li><i class="icon-globe3"></i><a href="http://www.teatrodelantagonista.cl">www.teatrodelantagonista.cl</a></li>
-							</ul>
-						</div>
-				</div>
-				</div>
-		</div>
 <style>
 
 	/* #colorlib-contact {
 	    padding: 55px 0 !important;
 	} */
 
-	.formulario {
-    box-shadow: 0px 0px 15px #8888886b;
+  .mb-30 {
+		margin-bottom: 50px;
 	}
+
+	.mt-30 {
+		margin-top: 50px;
+	}
+
+	figure {
+    margin: 0;
+    font-size: 14px;
+	}
+
+	.section-title-contacto {
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 50px;
+    line-height: 50px;
+    color: #2c3e50;
+    position: relative;
+	}
+
+	.listaprodserv ul{margin:0; padding:0}
+
+	.listaprodserv li{
+
+		list-style: disc;
+		font-family:Courier,monospace;
+		font-size:14px;
+		color:#504f4f;
+		list-style-position:inside;
+		line-height:20px;
+		margin-left:10px;}
+
+	.listaprodserv li a{
+		color:#504f4f;
+		list-style-position:inside;
+		line-height:20px;
+		text-decoration:none;}
+
+	.listaprodserv li a:hover{
+		color:#797979;
+		text-decoration:underline;}
+
+		.formulario {
+	    box-shadow: 0px 0px 15px #8888886b;
+		}
 
 	.form-title {
     text-align: center;
@@ -243,7 +303,6 @@
     color: #fff;
     padding: 15px 0;
 	}
-
 
   .container {
       position: relative;
@@ -389,7 +448,6 @@
       padding: 0;
   }
   h3{
-      margin: 0;
       font-weight: 100;
       font-size: 1em;
   }
