@@ -77,12 +77,17 @@ def registrar(request):
         enviar_mail(
             html = True,
             to_email = ['admision@teatroescuela.cl'],
-            subject = 'Nuevo Registro',
+            subject = 'Nueva Consulta',
             message = 'mail/nuevo-admin.html',
             data = {
                 'nombre'   : request.POST.get('a-nombre'),
                 'apellido' : request.POST.get('a-apellido'),
                 'email'    : request.POST.get('a-email'),
+                'telefono' : request.POST.get('a-telefono'),
+                'run'      : request.POST.get('a-run'),
+                'modalidad': request.POST.get('a-modalidad'),
+                'mensaje'  : request.POST.get('a-mensaje'),
+
             },
         )
 
