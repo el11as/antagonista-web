@@ -109,7 +109,7 @@ def enviar_malla(request):
         enviar_mail(
             html = True,
             to_email = [request.POST.get('m-email')],
-            subject = 'ADIMISION 2020: Malla Curricular Teatro Escuela',
+            subject = 'ADMISION 2020: Malla Curricular Teatro Escuela',
             message = 'mail/malla-2020.html',
             attach  = 'static/images/malla_2020.png',
         )
