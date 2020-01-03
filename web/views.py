@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect, JsonResponse, HttpResponseServerError
 from utilidades.views import *
+from web.models import *
 
 # Create your views here.
 
@@ -74,6 +75,13 @@ def registrar(request):
         message = 'Evio de correo'
         error   = 'Envio de correo exitoso'
 
+        contacto = Contacto()
+        contacto.origen   = 2
+        contacto.nombre   = request.POST.get('a-nombre') +' '+ request.POST.get('a-apellido')
+        contacto.correo   = request.POST.get('a-email')
+        contacto.telefono = request.POST.get('a-telefono')
+        contacto.save()
+
         enviar_mail(
             html = True,
             to_email = ['admision@teatroescuela.cl'],
@@ -110,6 +118,13 @@ def enviar_malla(request):
         status = True
         message = 'Evio de correo'
         error   = 'Envio de correo exitoso'
+
+        contacto = Contacto()
+        contacto.origen   = 1
+        contacto.nombre   = request.POST.get('m-nombre')
+        contacto.correo   = request.POST.get('m-email')
+        contacto.telefono = request.POST.get('m-fono')
+        contacto.save()
 
         enviar_mail(
             html = True,
