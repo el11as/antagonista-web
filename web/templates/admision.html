@@ -138,7 +138,7 @@
 								</div>
 								<div class="col-md-12">
 									<div class="form-group">
-										<input id="admin-run" name="a-run"  type="run" class="form-control" placeholder="16484209-6">
+										<input id="admin-run" name="a-run"  type="run" class="form-control formato-rut" placeholder="xx.xxx.xxx-x">
 									</div>
 								</div>
 								<div class="col-md-12">
@@ -491,6 +491,11 @@
 	$(document).ready(function() {
 		validar_adminision();
 		valida_malla();
+
+		$(".formato-rut").rut({
+				formatOn: 'keyup'
+		})
+
 	});
 
 	function descargar_malla(){
@@ -514,6 +519,18 @@
               'required': true,
               'email': true,
           },
+					'a-run': {
+							'required': true,
+							'rut': true,
+					},
+					'a-telefono':{
+							'required': true,
+
+					},
+					'a-mensaje':{
+							'required': true,
+
+					}
         },
         errorPlacement: function(error, element) {
             console.log('errorPlacement')

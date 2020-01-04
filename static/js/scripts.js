@@ -23,3 +23,12 @@ function loading(config) {
     $.unblockUI();
   }
 }
+
+
+$.validator.addMethod("rut", function(value, element) {
+    var status = true;
+    if (!$.validateRut(value)) {
+        status = false
+    }
+    return status;
+}, 'R.U.T. inválido.');
